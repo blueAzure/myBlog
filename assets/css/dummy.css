@@ -1,0 +1,119 @@
+/*********************************************************************
+                        BLOG created By.Suga
+**********************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+/* [http://stackoverflow.com/questions/32996454/css-folded-corner-effect-transparent-background]を参考。
+pure cssで行える様々な紙を織り込んだようなデザインの実現方法が載っているので、またそのうち見てみること。
+*/
+.foldedPaper{
+    position: relative;
+    width: 320px;
+    padding: 1em 1.5em;
+    margin: 2em auto;
+    color: #fff;
+    background: linear-gradient(to bottom left, transparent 50%, #658E15 50%), linear-gradient(to right, #97C02F 99.9%, transparent 99.9%), linear-gradient(to right, #97C02F 99.9%, transparent 99.9%);
+    background-size: 16px 16px, 100% 100%, 100% 100%;
+    background-position: 100% 0%, -16px 0%, 100% 16px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+
+
+
+/* tabに関する実験 [ここから] */
+/* 参考 http://luiszuno.com/themes/nova/index.html */
+/* 自分のサイトに合うように改造して使うこと。 */
+.tabs { 
+    list-style:none; 
+    margin:0 !important;
+    padding: 0px;	
+    height: 32px;
+    background: url(../../dummyParts/tabs-divider.png) no-repeat bottom center;
+}
+
+/* single tab */
+ul.tabs li { 
+    display: block;
+    float:left;	 
+    text-indent:0;
+    padding:0;
+    margin: 0px 5px 0px 0px !important;
+    list-style-image: none !important; 
+}
+
+
+/* link inside the tab. uses a background image */
+ul.tabs a { 
+    display:block;
+    font-size:12px;
+    height: 30px;  
+    line-height:30px;
+    text-align:center;	
+    text-decoration:none;
+    padding: 0px 0px 0px 10px;	
+    position:relative;
+    top:0px;
+    background:  url(../../dummyParts/tabs.png) no-repeat;
+}
+
+ul.tabs a span{ 
+    display:block;
+    height: 100%;
+    padding-right: 10px;
+    background:  url(../../dummyParts/tabs.png) no-repeat right -40px;
+}
+
+
+/* when mouse enters the tab move the background image */
+ul.tabs a:hover { 
+    background-position: 0px -80px;
+}
+ul.tabs a:hover span{ 
+    background-position: right -120px;
+}
+
+/* tabに関する実験 [ここまで] */
+
+
+
+
+
+
+
+.board-top {
+    position: relative;
+    padding: 38px 0 0 38px;
+    width: 960px;
+    height: 57px;
+    margin: 0 0 0 0;
+    background: url('../../dummyParts/board_bg_top.gif') no-repeat
+}
+
+.board-main {
+    line-height: 25px;
+    position: relative;
+    left: 8px;
+    width: 951px;
+    background: url('../../dummyParts/board_bg_main.gif') repeat-y
+}
+
+.board-bottom {
+    position: relative;
+    /*padding: 0 16px 18px 8px;*/
+    margin-left: 18px;
+    padding: 0 0 20px 0;
+    width: 921px;
+    background: url('../../dummyParts/board_main_bottom.jpg') no-repeat bottom
+        /* board_main_bottom.jpg [951px*18px] */
+}

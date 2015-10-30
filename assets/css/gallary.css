@@ -1,0 +1,52 @@
+
+/* infinite scroll のローディング画像のcss */
+/* これらの指定がないと変なところに画像が出現するので注意。*/
+/* gallary.html で使用。 */ 
+#infscr-loading img {
+    text-align: center;
+    z-index: 100;
+    position: fixed;
+    left: 45%;
+    bottom: 10px;
+    width: 85px;
+    padding: 10px;
+    display : block;
+}
+
+
+
+
+/* gallary.htmlで使用 */
+.image-item {
+    margin: 10px;
+    padding: 5px;
+    background: #fff;
+    font-size: 11px;
+    line-height: 1.4em;
+    float: left;
+    box-shadow: 2px 2px 5px 0 #000;
+}
+
+.image-item:hover {
+    /*background: #000;*/
+    box-shadow: 2px 2px 15px #000;
+}
+
+
+/************************* .more-link  *************************/
+
+.more-link {
+    font-size: 20px;
+    font-family: Georgia, serif;
+    font-style: italic;
+    color: #666666;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: right;
+}
+
+.more-link:hover {
+    color: #333333;
+    text-decoration: underline;
+}

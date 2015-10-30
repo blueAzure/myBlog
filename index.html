@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="SugarArt">
+
+    <title>myPage</title>
+
+    <link rel="shortcut icon" href="assets/images/icon.ico">
+
+    <!-- Bootstrap itself -->
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Styles Sheet (CSS) -->
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
+    <!-- icon -->
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Title Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
+
+    <!-- Google Analitics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-64281368-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+
+<body class="main-theme text-shadows">
+    <nav class="mainmenu">
+        <div class="container">
+            <div class="dropdown">
+                <button type="button" class="navbar-toggle" data-toggle="dropdown">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <!-- <a data-toggle="dropdown" href="#">Dropdown trigger</a> -->
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="gallary.html">Gallary</a></li>
+                    <li><a href="about.html">About me</a></li>
+                    <li><a href="dummy.html">Dummy</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <!-- 1st section -->
+    <section class="section" id="index">
+        <div class="container">
+            <h1 class="title">[Title]</h1>
+            <h2 class="subtitle">-Sugar Art's blog page-</h2>
+            <hr>
+            <h3 class="tagline">
+                    Welcome To My Page.
+            </h3>
+            <h4>
+                But nothing is here. Sorry...
+            </h4>
+
+            <h3>
+                以下はテスト。
+            </h3>
+            <h4>
+                <a href="https://googledrive.com/host/0Bz0EXA0hKPXJfmdKWWdVNnFRT3lhc2xDNmptRHpaT2dteElRWkQ2dHY0alFsZnJKWjQ2SnM" class="btn btn-default"> Full URL</a>
+                <br>
+                <a href="https://goo.gl/K8SoZO" class="btn btn-default">short URL</a>
+                <br>
+                細部にこだわりすぎないこと
+                <br>
+            </h4>
+            
+            
+            <!-- 作成日を表示できるが、ブラウザ対応の可否や、今後の実装については不明。別のやり方を使うべきかも 
+                ちなみに、lastModifiedに対応するfileCreatedDateは現在未実装。-->
+            <h5>
+                <script type="text/javascript">
+                    lastDate = new Date( document.lastModified );
+                    year = lastDate.getFullYear();
+                    month = lastDate.getMonth() + 1;
+                    date = lastDate.getDate();
+                    document.write("最終更新日 : ", year, "/", month, "/", date);
+                </script>
+            </h5>
+        </div>
+    </section>
+
+
+
+
+    <!-- Load javascript libraries -->
+    <!-- JavaScriptのPluginは頻繁に仕様が変わるため、versionの変更の際には注意すること。 -->
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+</body>
+
+
+</html>

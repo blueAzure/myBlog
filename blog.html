@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="SugarArt">
+
+    <title>Blog</title>
+
+    <link rel="shortcut icon" href="/assets/images/icon.ico">
+
+    <!-- Bootstrap itself -->
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Styles Sheet (CSS) -->
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/blogList.css">
+
+    <!-- icon -->
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <!-- Title Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
+
+    <!-- Google Analitics -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-64281368-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+
+
+
+<body class="main-theme text-shadows">
+
+    <!-- Menu Bar -->
+    <nav class="mainmenu">
+        <div class="container">
+            <div class="dropdown">
+                <button type="button" class="navbar-toggle" data-toggle="dropdown">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="gallary.html">Gallary</a></li>
+                    <li><a href="about.html">About me</a></li>
+                    <li><a href="dummy.html">Dummy</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    
+    <!-- 1st section -->
+    <section class="section" id="blog">
+        <div class="container">
+            <h1 class="title">Blog</h1>
+            <h2 class="subtitle">-subtitle-</h2>
+            <hr>
+
+            <h3 class="tagline">記事一覧</h3>
+
+            <!-- isotope filter bar -->
+            <ul class="isotope-filter">
+                <li>
+                    <a href="#" data-filter="*" class="current">
+                        All
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-filter=".developmentBlog">
+                        Dev. Blog
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-filter=".others">
+                        others
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-filter=":not(.developmentBlog)">
+                        Except Dev. Blog
+                    </a>
+                </li>
+            </ul>
+
+            <!-- isotope sort bar -->
+            <ul class="isotope-sort">
+                <li>
+                    <a href="#" data-sort-by="original-order">
+                        default
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-sort-by="post-lastDate">
+                        最新
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-sort-by="post-ID">
+                        投稿順
+                    </a>
+                </li>
+            </ul>
+
+            <!-- isotope table -->
+            <div class="isotope-article-table">
+
+                <a href="./blogPages/testBlogPage.html" class="post-item" style="border: solid 1px; border-color: black;">
+                </a>
+
+                <a href="./blogPages/blog-entry-1.html" class="post-item box-effect shadow-effect">
+                </a>
+
+                <a href="./blogPages/blog-entry-2.html" class="post-item box-effect shadow-effect">
+                </a>
+
+                <a href="./blogPages/blog-entry-3.html" class="post-item box-effect shadow-effect">
+                </a>
+            </div>
+
+
+
+        </div>
+    </section>
+
+
+    <!-- Load javascript libraries -->
+    <!-- JavaScriptのPluginは頻繁に仕様が変わるため、versionの変更の際には注意すること。 -->
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+    <!-- isotope -->
+    <script type="text/javascript" src="assets/js/isotope.pkgd.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.isotope-article-table').isotope({
+                itemSelector: '.post-item',
+                getSortData: {
+                    postID: ".post-ID parseInt",
+                    lastUpdatedDate: ".post-lastDate"
+                },
+                masonry: {
+                    columnWidth: 10
+                }
+            });
+        });
+    </script>
+
+    <!-- isotope filter -->
+    <script type="text/javascript">
+        $('.isotope-filter a').click(function () {
+            $('.isotope-filter .current').removeClass('current');
+            $(this).addClass('current');
+            var selector = $(this).attr('data-filter');
+            $('.isotope-article-table').isotope({
+                filter: selector,
+                animationOptions: {
+                    duration: 750,
+                    easing: 'linear',
+                    queue: false
+                }
+            });
+            return false;
+        });
+    </script>
+
+    <!-- isotope sort -->
+    <script type="text/javascript">
+        $('.isotope-sort a').click(function () {
+            var sortByValue = $(this).attr('data-sort-by');
+            $('.isotope-article-table').isotope({
+                sortBy: sortByValue,
+                animationOptions: {
+                    duration: 750,
+                    easing: 'linear',
+                    queue: false
+                }
+            });
+            return false;
+        });
+    </script>
+
+
+    <!-- 外部のhtmlからデータを取得するスクリプト -->
+    <!-- 各ポストのhtmlから記事のタイトル、ID、閲覧数(現在未完成)、投稿日、最終更新日を取得し、記事に追加する。 -->
+    <!--
+    <script type="text/javascript">
+        $(function () {
+            var postItemArray = document.getElementsByClassName("post-item");
+            var itemNum = postItemArray.length;
+
+            for (i = 0; i < itemNum; i++) {
+                (function (j) {
+                    $.ajax({
+                        type: 'GET',
+                        dataType: 'html',
+                        url: postItemArray.item(j),
+                        success: function (data) {
+                            //var postTitle = $(data).find('.post-title').text();
+                            var postTitle = $(data).find('.post-title').text();
+                            if (postTitle == null) {
+                                postTitle = "Error :: can't get Title!"
+                            }                          
+                            var postItemArray = document.getElementsByClassName("post-item");
+                            postItemArray.item(j).innerHTML += postTitle + "<br>";
+                            //window.alert("getTitle:" + postTitle + "\n" + "in:" + postItemArray.item(j));
+                        }
+                    });
+                })(i)
+            }
+        });
+    </script>
+    -->
+
+    <script type="text/javascript">
+        $(function () {
+            var postItemArray = document.getElementsByClassName("post-item");
+            var itemNum = postItemArray.length;
+
+            var getPostData = function (j) {
+                $.ajax({
+                    type: 'GET',
+                    dataType: 'html',
+                    url: postItemArray.item(j),
+                    success: function (data) {
+                        var postTitle = $(data).find('.post-title').text();
+                        var postID = $(data).find('.post-id').text();
+                        var postDate = $(data).find('.post-date').text();
+                        var postLastDate = $(data).find('.post-lastDate').text();
+                        var postViews = $(data).find('.post-views').text();
+                        var postOverview = $(data).find('.post-overview').text();
+                        var postTag = $(data).find('.post-tag').text();
+                        if (postLastDate == null) {
+                            postLastDate = postDate;
+                        }
+
+                        var postItemArray = document.getElementsByClassName("post-item");
+                        postItemArray.item(j).innerHTML += '<div class=\"post-title\"">' + postTitle + "</div>";
+                        postItemArray.item(j).innerHTML += '<div class=\"post-date\"">' + postDate + "</div>";
+                        postItemArray.item(j).innerHTML += '<div class=\"post-lastDate\"">' + postLastDate + "</div>";
+                        postItemArray.item(j).innerHTML += '<span class=\"post-views\"">' + postViews + "</span>";
+                        postItemArray.item(j).innerHTML += '<div class=\"post-overview\"">' + postOverview + "</div>";
+                        postItemArray.item(j).innerHTML += '<span class=\"post-id\"">' + postID + "</span>";
+                        postItemArray.item(j).className += " " + postTag;
+
+                        // 確認用
+                        //window.alert("getTitle:" + postTitle + "\n" + "in:" + postItemArray.item(j));
+                        //window.alert("getID:" + postID);
+                        //window.alert("getDate:" + postDate);
+                        //window.alert("getLastDate:" + postLastDate);
+                        //window.alert("getViews:" + postViews);
+                        //window.alert("getOverview:" + postOverview);
+                        //window.alert("getTag:" + postTag);
+                    }
+                });
+            }
+
+            for (i = 0; i < itemNum; i++) {
+                getPostData(i);
+            }
+        });
+    </script>
+
+
+
+
+
+</body>
+
+</html>
