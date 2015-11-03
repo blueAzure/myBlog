@@ -94,8 +94,8 @@
                 <script type="text/javascript">
                     lastDate = new Date( document.lastModified );
                     year = lastDate.getFullYear();
-                    month = lastDate.getMonth() + 1;
-                    date = lastDate.getDate();
+                    month = ("0" + (lastDate.getMonth() + 1)).slice(-2);
+                    date = ("0" + (lastDate.getDate() + 1)).slice(-2);
                     document.write("最終更新日 : ", year, "/", month, "/", date);
                 </script>
             </h5>
