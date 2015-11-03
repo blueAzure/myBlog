@@ -1,0 +1,414 @@
+/*
+Contents List={
+        Common (html,body)
+        Navigation bar ()
+        Sections
+        Typography
+        Buttons
+        Theme: Text shadows 
+        Theme: main theme
+    }
+*/
+
+
+
+/********************************************************/
+/*                        fonts                         */
+/********************************************************/
+@font-face {
+font-family: 'Koruri Regular';
+src: url('../fonts/kokuri-font/Koruri-Regular-sub.eot');
+src: url('../fonts/kokuri-font/Koruri-Regular-sub.eot?#iefix') format('embedded-opentype'),
+url('../fonts/kokuri-font/Koruri-Regular-sub.woff') format('woff'),
+url('../fonts/kokuri-font/Koruri-Regular-sub.ttf') format('truetype');
+}
+
+
+
+
+
+
+/********************************************************/
+
+
+/*                       Common                         */
+
+
+/********************************************************/
+
+html {
+    background: #FFFFFF url(../images/woodBoard.jpg) no-repeat center center fixed;
+    min-height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow-y: scroll;
+    /* 表示切れない部分はスクロールによって閲覧できる。 Add By.Sugar 2015.06.14 */
+}
+
+body {
+    background: transparent;
+    min-height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+    line-height: 1.5em;
+    font-size: 15px;
+    font-family: Koruri Regular, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+    color: #fff;
+    color: rgba(0, 0, 0, .8);
+    font-weight: normal;
+    display:block;
+}
+
+
+
+/********************************************************/
+
+
+/*                    Navigation bar                    */
+
+
+/********************************************************/
+
+.mainmenu {
+    z-index: 999999;
+    width: 90%;
+    padding: 20px 0 0 0;
+}
+
+@media (min-width: 800px) {
+    .mainmenu {
+        position: fixed;
+    }
+}
+
+.navbar-toggle {
+    position: relative;
+    float: left;
+    display: block;
+    padding: 9px 10px;
+    background: rgba(255, 255, 255, 0.2);
+    background-image: none;
+    border: 0 none;
+    top: 0px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    outline: 0;
+    opacity: 1;
+    -webkit-transition: all .45s;
+    -moz-transition: all .45s;
+    transition: all .45s;
+    float: left;
+}
+
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #fff;
+}
+
+.navbar-toggle .icon-bar + .icon-bar {
+    margin-top: 4px;
+}
+
+.open .navbar-toggle {
+    top: -70px;
+    opacity: 0;
+}
+
+.mainmenu .dropdown-menu {
+    top: -14em;
+    left: 0px;
+    font-size: 15px;
+    padding: 0;
+    background: none;
+    border: 0 none;
+    border-radius: 2px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    display: block;
+    opacity: 0;
+    -webkit-transition: all .45s;
+    -moz-transition: all .45s;
+    transition: all .45s;
+}
+
+.mainmenu .dropdown-menu .active {
+    font-weight: bold;
+}
+
+.mainmenu .open .dropdown-menu {
+    top: 2px;
+    opacity: 1;
+}
+
+.mainmenu .menu a {
+    padding: 10px 10px;
+    margin: 0;
+    color: white;
+    text-decoration: none;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.mainmenu .dropdown-menu a:hover {
+    background: rgba(255, 255, 255, .1);
+    color: white;
+    padding: 10px 8px 10px 12px;
+}
+
+
+/********************************************************/
+
+
+/*             Sections - universal classes             */
+
+
+/********************************************************/
+
+.section {
+    z-index: 1;
+    min-height: 420px;
+    width: 100%;
+    overflow: auto;
+    height: 100%;
+    padding: 20px 0 30px 30px;
+    display: block; /* noneにする事で、setionのデフォルトを非表示にすることができる。 */
+    top: 0;
+}
+
+
+
+/********************************************************/
+
+
+/*                      Typography                      */
+
+
+/********************************************************/
+
+a {
+    color: #fff;
+    /* text-decoration: none; */
+}
+
+a:hover,
+a:active {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.lead {
+    font-weight: normal;
+    font-size: 1.5em;
+    line-height: 1.2em;
+}
+
+.title,
+.subtitle {
+    font-family: 'Wire One', Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 7em;
+    margin-bottom: 15px;
+    color: #FDF9F4;
+    line-height: 1em;
+}
+
+.subtitle {
+    line-height: .9em;
+    font-size: 3.0em;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.tagline {
+    font-size: 1.4em;
+    line-height: 1.3em;
+    font-weight: bold;
+    margin: 30px 0 10px 0;
+}
+
+@media (max-width: 800px) {
+    .lead {
+        font-size: 1.3em;
+    }
+}
+
+
+/********************************************************/
+
+
+/*                   UI - Buttons                       */
+
+
+/********************************************************/
+
+.btn {
+    color: #333;
+    margin: 2px 0 2px 0;
+    text-shadow: none;
+    text-decoration: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 0 none;
+}
+
+.btn:hover {
+    color: #000;
+}
+
+.btn-lg {
+    padding: 16px 30px;
+    font-size: inherit;
+}
+
+.btn-link {
+    color: rgba(255, 255, 255, .8);
+}
+
+.btn-link:hover,
+.btn-link:focus,
+.btn-link:active {
+    color: #fff
+}
+
+.btn-default {
+    background: rgba(255, 255, 255, .5);
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active {
+    background: rgba(255, 255, 255, .8);
+}
+
+.btn-primary {
+    background: rgba(255, 255, 255, .2);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:active {
+    background: rgba(255, 255, 255, .5);
+}
+
+
+/********************************************************/
+
+
+/*                        Theme                         */
+
+
+/********************************************************/
+
+
+/*                   Theme: text-shadows                */
+
+.text-shadows {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+}
+
+.text-shadows .title,
+.text-shadows .subtitle,
+.text-shadows .tagline {
+    text-shadow: 0 2px 3px rgba(0, 0, 0, .4);
+}
+
+.text-shadows .mainmenu .dropdown-menu a {
+    text-shadow: 0 2px 1px rgba(0, 0, 0, .2);
+}
+
+.text-shadows .mainmenu .dropdown-menu a:hover {
+    text-shadow: none;
+}
+
+
+/***********************************************************/
+
+
+/*                 Theme: main theme                   */
+
+
+/***********************************************************/
+
+.main-theme {
+    color: #222;
+    color: rgba(0, 0, 0, .8);
+    text-align: center;
+}
+
+.main-theme a {
+    color: #000;
+}
+
+.main-theme .btn {
+    color: rgba(255, 255, 255, .8);
+}
+
+.main-theme .btn:hover {
+    color: #ddd;
+}
+
+.main-theme .btn-link {
+    color: rgba(0, 0, 0, .8);
+}
+
+.main-theme .btn-link:hover,
+.main-theme .btn-link:focus,
+.main-theme .btn-link:active {
+    color: #ddd
+}
+
+.main-theme .navbar-toggle {
+    background: rgba(0, 0, 0, 0.12);
+}
+
+.main-theme .navbar-toggle .icon-bar {
+    background: #333;
+}
+
+.main-theme .mainmenu .dropdown-menu a {
+    color: #000;
+}
+
+.main-theme .mainmenu .dropdown-menu a:hover {
+    background: rgba(0, 0, 0, .1);
+    color: #000;
+}
+
+.main-theme .title,
+.main-theme .subtitle,
+.main-theme .tagline {
+    color: #111111;
+}
+
+.main-theme .btn-default {
+    background: rgba(0, 0, 0, .4);
+}
+
+.main-theme .btn-default:hover,
+.main-theme .btn-default:focus,
+.main-theme .btn-default:active,
+.main-theme .btn-default.active {
+    background: rgba(0, 0, 0, .6);
+    color: #fff;
+}
+
+.main-theme .btn-primary {
+    background: rgba(0, 0, 0, .2);
+}
+
+.main-theme .btn-primary:hover,
+.main-theme .btn-primary:focus,
+.main-theme .btn-primary:active,
+.main-theme .btn-primary.active {
+    background: rgba(0, 0, 0, .3);
+    color: #fff;
+}
