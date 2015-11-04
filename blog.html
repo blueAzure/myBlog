@@ -44,15 +44,10 @@
 
 
 
-
 <body class="main-theme text-shadows">
 
+    <!-- header -->
     <div id="header"></div>
-
-
-
-
-
 
     <!-- 1st section -->
     <section class="section" id="blog">
@@ -128,8 +123,6 @@
                 </a>
             </div>
 
-
-
         </div>
     </section>
 
@@ -148,21 +141,7 @@
     <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
     
     <!-- load header from header.html -->
-    <script type="text/javascript">
-        $(function () {
-            var header = document.getElementById("header");
-            $.ajax({
-                url: "./header.html",
-                success: function (data) {
-                    header.innerHTML += data;
-                }
-            });
-        });
-    </script>
-
-
-
-
+    <script type="text/javascript" src="/assets/js/load-header.js"></script>
 
     <!-- isotope -->
     <script type="text/javascript" src="assets/js/isotope.pkgd.min.js"></script>
