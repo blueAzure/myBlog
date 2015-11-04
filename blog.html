@@ -20,7 +20,7 @@
 
     <!-- icon -->
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    
+
     <!-- Title Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
 
@@ -47,19 +47,13 @@
 
 <body class="main-theme text-shadows">
 
-    <!-- jQuery -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <div id="header"></div>
 
-    <script type="text/javascript" src="./header.js"></script>
-    
-    <script type="text/javascript">
-        writeHeader();
-    </script>
 
-    
-    
-            
-    
+
+
+
+
     <!-- 1st section -->
     <section class="section" id="blog">
         <div class="container">
@@ -126,10 +120,10 @@
 
                 <a href="./blogPages/blog-entry-3.html" class="post-item box-effect shadow-effect">
                 </a>
-                
+
                 <a href="./blogPages/blog-entry-4.html" class="post-item box-effect shadow-effect">
                 </a>
-                
+
                 <a href="./blogPages/blog-entry-5.html" class="post-item box-effect shadow-effect">
                 </a>
             </div>
@@ -140,6 +134,10 @@
     </section>
 
 
+
+
+
+
     <!-- Load javascript libraries -->
     <!-- JavaScriptのPluginは頻繁に仕様が変わるため、versionの変更の際には注意すること。 -->
 
@@ -148,9 +146,24 @@
 
     <!-- bootstrap -->
     <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-
-
     
+    <!-- load header from header.html -->
+    <script type="text/javascript">
+        $(function () {
+            var header = document.getElementById("header");
+            $.ajax({
+                url: "./header.html",
+                success: function (data) {
+                    header.innerHTML += data;
+                }
+            });
+        });
+    </script>
+
+
+
+
+
     <!-- isotope -->
     <script type="text/javascript" src="assets/js/isotope.pkgd.min.js"></script>
     <script type="text/javascript">
