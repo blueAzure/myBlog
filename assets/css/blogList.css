@@ -69,13 +69,6 @@ BLOG created By.Suga
 }
 
 
-
-
-
-
-
-
-
 .post-item {
     text-align: center;
     font-family: Koruri Regular,Georgia, serif;
@@ -94,9 +87,6 @@ BLOG created By.Suga
 .post-item:hover {
 
 }
-
-
-
 
 
 
@@ -123,10 +113,6 @@ ul.isotope-filter li a, ul.isotope-sort li a{
     text-align:center;
     padding: 0 0 0 10px;
 }
-
-
-
-
 
 
 .post-lastDate{
@@ -160,12 +146,6 @@ ul.isotope-filter li a, ul.isotope-sort li a{
 }
 
 
-
-
-
-
-
-
 /************************* .post-title  *************************/
 
 .post-title {
@@ -185,10 +165,9 @@ ul.isotope-filter li a, ul.isotope-sort li a{
 /************************* .post-overview  *************************/
 
 .post-overview {
-    font-size: 20px;
+    font-size: 16px;
     margin: 0 0 50px 0;
     text-align: left;
 }
-
 
 
