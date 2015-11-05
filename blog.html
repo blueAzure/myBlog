@@ -197,34 +197,6 @@
 
     <!-- 外部のhtmlからデータを取得するスクリプト -->
     <!-- 各ポストのhtmlから記事のタイトル、ID、閲覧数(現在未完成)、投稿日、最終更新日を取得し、記事に追加する。 -->
-    <!--
-    <script type="text/javascript">
-        $(function () {
-            var postItemArray = document.getElementsByClassName("post-item");
-            var itemNum = postItemArray.length;
-
-            for (i = 0; i < itemNum; i++) {
-                (function (j) {
-                    $.ajax({
-                        type: 'GET',
-                        dataType: 'html',
-                        url: postItemArray.item(j),
-                        success: function (data) {
-                            //var postTitle = $(data).find('.post-title').text();
-                            var postTitle = $(data).find('.post-title').text();
-                            if (postTitle == null) {
-                                postTitle = "Error :: can't get Title!"
-                            }                          
-                            var postItemArray = document.getElementsByClassName("post-item");
-                            postItemArray.item(j).innerHTML += postTitle + "<br>";
-                            //window.alert("getTitle:" + postTitle + "\n" + "in:" + postItemArray.item(j));
-                        }
-                    });
-                })(i)
-            }
-        });
-    </script>
-    -->
 
     <script type="text/javascript">
         $(function () {
