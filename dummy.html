@@ -64,16 +64,16 @@
                 calendar = function calendar() {
                     var theDate = new Date();
                     var dayArray = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-                    
-                    var msg = theDate.getFullYear() +"/";
-                    msg += ("0"+(theDate.getMonth()+1)).slice(-2) + "/"
-                    msg += ("0"+theDate.getDate()).slice(-2);
+
+                    var msg = theDate.getFullYear() + "/";
+                    msg += ("0" + (theDate.getMonth() + 1)).slice(-2) + "/"
+                    msg += ("0" + theDate.getDate()).slice(-2);
                     msg += "(" + dayArray[theDate.getDay()] + ")";
-                    msg += " " + ("0"+theDate.getHours()).slice(-2) + ":" + 
-                        ("0"+theDate.getMinutes()).slice(-2) + ":" + ("0"+theDate.getSeconds()).slice(-2);
+                    msg += " " + ("0" + theDate.getHours()).slice(-2) + ":" +
+                        ("0" + theDate.getMinutes()).slice(-2) + ":" + ("0" + theDate.getSeconds()).slice(-2);
                     document.getElementById("calendar").innerHTML = msg;
                 }
-                setInterval('calendar()',1000);
+                setInterval('calendar()', 1000);
             </script>
 
             <h3>javascript date and time</h3>
@@ -82,15 +82,40 @@
                     calendar();
                 </script>
             </h4>
-            
+
 
             <!-- folded paper design -->
             <h3 class="tagline">
                 pure css folded paper design 
             </h3>
             <h4>
-                <div class="foldedPaper">folded paper!</div>
+                <div class="foldedPaper">folded paper! test:1</div>
             </h4>
+
+            <h4>
+                <!-- (width=450px, height=278px)を基準とした黄金比により、折り込み部分の一辺の長さは41px、 -->
+                <div style="width: 450px;
+                            height: 278px;
+                            color: black;
+                            border: solid 1px; /* テスト用。後で削除 */
+                            border-color: black; /* テスト用。後で削除 */
+                            margin: 50px;
+                            padding: 10px;
+
+                            /* 描画範囲は三角(折りたたんでいる部分)の対角線長にするので、41px/1.4114=29pxとなる。 */
+                            /* 最前列のレイヤー : 折りたたみ部分以外の色付けのレイヤー、右上から左下までを開始位置から29px先を始点として色付け。 */
+                            /* ２枚目のレイヤー : 41pxにすると少しずれるので、右上から(40px)×(40px)の範囲を対象とする。
+                            対象の正方形領域の中心点から 色付け。 */
+                            /*  linear-gradient(グラデの方向   , 開始の色     位置, 終了の色       位置) x座標 y座標 繰り返しなし */
+                            background: linear-gradient(-135deg, transparent 29px, rgba(219, 219, 219, 0.55) 0) 100% 0 no-repeat,
+                            linear-gradient(-135deg, transparent 50%, rgba(0, 0, 0, 1.0) 0) 100% 0% no-repeat;
+                            background-size: auto, 40px 40px;
+                            box-shadow: -10px 10px 10px rgba(0,0,0,0.3);
+                            ">
+                    folded paper! test:2
+                </div>
+            </h4>
+
 
 
             <!-- Test Message -->
