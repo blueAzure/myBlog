@@ -76,12 +76,17 @@
                     <div class="post-id" style="float:left;">
                         <i class="fa fa-cube"></i> 1
                     </div>
-                    
+
                     <!-- 2段落目 -->
                     <br>
                     <i class="fa fa-star-o" style="color:black; float:left; margin-right:15px;"> views</i>
                     <i class="fa fa-twitter" style="color:black; float:left; margin-right:15px;"> twitter</i>
                     <i class="fa fa-facebook" style="color:black; float:left; margin-right:15px;"> facebook</i>
+
+                    <div>
+                        <a class="twitter-share-button" href="https://twitter.com/share" data-dnt="true">Tweet</a>
+                        
+                    </div>
                 </div>
 
                 <div style="clear:both; "></div>
@@ -127,6 +132,24 @@
 
     <!-- load header from header.html -->
     <script type="text/javascript " src="/assets/js/load-header.js "></script>
+
+    <!-- twitter share button -->
+    <script type="text/javascript">
+        window.twttr = (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+                t = window.twttr || {};
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+            t._e = [];
+            t.ready = function (f) {
+                t._e.push(f);
+            };
+            return t;
+        }(document, "script", "twitter-wjs"));
+    </script>
 
     <!-- FancyBox -->
     <script type="text/javascript " src="../assets/js/jquery.fancybox.js "></script>
