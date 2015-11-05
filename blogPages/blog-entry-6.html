@@ -85,7 +85,9 @@
 
                     <div>
                         <a class="twitter-share-button" href="https://twitter.com/share" data-dnt="true">Tweet</a>
-                        
+
+                        <div class="fb-like" data-href="http://dummy.jp" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+
                     </div>
                 </div>
 
@@ -149,6 +151,19 @@
             };
             return t;
         }(document, "script", "twitter-wjs"));
+    </script>
+
+    <!-- facebook shre button -->
+    <div id="fb-root"></div>
+    <script type="text/javascript">
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.0";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
     </script>
 
     <!-- FancyBox -->
