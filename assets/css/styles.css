@@ -85,12 +85,7 @@ body {
     z-index: 999999;
     width: 90%;
     padding: 20px 0 0 0;
-}
-
-@media (min-width: 800px) {
-    .mainmenu {
-        position: fixed;
-    }
+    position: fixed;
 }
 
 .navbar-toggle {
