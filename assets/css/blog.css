@@ -4,6 +4,33 @@
 
 
 
+
+.pocket-btn{
+    width: 80px;
+}
+
+
+
+
+
+/********************** .post-info-list  **********************/
+.post-info-list{
+    font-size:13px;
+    padding:0;
+    border:none;
+    list-style-type:none;
+}
+
+.post-info-list li{
+    float:right;
+    margin-right:10px;
+    text-align:center;
+    line-height:0;
+}
+
+
+
+
 /*************************** .post  ***************************/
 
 .post {
@@ -65,7 +92,7 @@
 
 .post-overview {
     font-size: 20px;
-    margin: 0 0 50px 0;
+    margin: 15px 0 50px 0;
     text-align: left;
 }
 
