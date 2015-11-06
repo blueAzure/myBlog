@@ -56,48 +56,57 @@
                 <div class="post-title">今後の実装リスト</div>
 
                 <!-- postInfo -->
-                <div class="post-leftInfo" style="font-size:12px;">
+                <ul class="post-info" style="font-size:13px; padding:0; border:none; list-style-type:none;">
 
                     <!-- 1段落目 -->
-                    <div class="post-date" style="float:left; margin-right:15px;">
+                    <li class="post-date" style="float:right; margin-right:15px; text-align:center;">
                         <i class="fa fa-clock-o"></i> 投稿日:
                         <time datetime="4/11/2015">2015/11/04</time>
-                    </div>
+                    </li>
 
-                    <div class="post-lastdate" style="float:left; margin-right:15px;">
+                    <li class="post-lastdate" style="float:right; margin-right:15px; text-align:center;">
                         <i class="fa fa-clock-o"></i> 最終更新日:
                         <time datetime="5/11/2015">2015/11/05</time>
-                    </div>
+                    </li>
 
-                    <div class="post-tag" style="float:left;">
+                    <li class="post-tag" style="float:right; margin-right:15px; text-align:center;">
                         <i class="fa fa-tag"></i> tag: developmentBlog
-                    </div>
+                    </li>
 
-                    <div class="post-id" style="float:left;">
+                    <li class="post-id" style="float:right; margin-right:15px; text-align:center;">
                         <i class="fa fa-cube"></i> 1
-                    </div>
+                    </li>
+                </ul>
 
-                    <!-- 2段落目 -->
-                    <br>
-                    <i class="fa fa-star-o" style="color:black; float:left; margin-right:15px;"> views</i>
-                    <i class="fa fa-twitter" style="color:black; float:left; margin-right:15px;"> twitter</i>
-                    <i class="fa fa-facebook" style="color:black; float:left; margin-right:15px;"> facebook</i>
+                <div style="clear:both; "></div>
 
-                    <div>
-                        <!-- twitter share button -->
-                        <a class="twitter-share-button" href="https://twitter.com/share" data-dnt="true"></a>
+                <!-- 2段落目 -->
+                <ul class="post-info" style="font-size:12px; padding:0; border:none; list-style-type:none; ">
 
-                        <!-- facebook share button -->
+                    <!-- pocket get button -->
+                    <!--
+                    <li style="float:right; margin-right:15px; text-align:center;">
+                        <a data-pocket-label="pocket" data-pocket-count="horizontal" data-pocket-align="right" class="pocket-btn" data-lang="en"></a>
+                    </li>
+                    -->
+
+                    <!-- twitter share button -->
+                    <li style="float:right; margin-right:15px; text-align:center;">
+                        <a class="twitter-share-button" href="https://twitter.com/share" data-dnt="true">tweet</a>
+                    </li>
+
+                    <!-- facebook share button -->
+                    <li style="float:right; margin-right:15px; text-align:center;">
                         <div class="fb-like" data-href="http://dummy.jp" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+                    </li>
 
-                        <!-- googlePlus share button -->
+                    <!-- googlePlus share button -->
+                    <li style="float:right; margin-right:15px; text-align:center;">
                         <div class="g-plus" data-action="share" data-annotation="bubble" data-href="http://dummy.jp"></div>
+                    </li>
 
-                        <!-- pocket get button -->
-                        <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a>
 
-                    </div>
-                </div>
+                </ul>
 
                 <div style="clear:both; "></div>
 
@@ -182,6 +191,7 @@
     </script>
 
     <!-- pocket button -->
+    <!--
     <script type="text/javascript">
         ! function (d, i) {
             if (!d.getElementById(i)) {
@@ -193,6 +203,7 @@
             }
         }(document, "pocket-btn-js");
     </script>
+    -->
 
     <!-- FancyBox -->
     <script type="text/javascript " src="../assets/js/jquery.fancybox.js "></script>
