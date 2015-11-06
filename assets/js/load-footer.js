@@ -1,7 +1,7 @@
 $(function () {
     var footer = document.getElementById("footer");
     $.ajax({
-        url: "/footer.html",
+        url: "/assets/footer.html",
         success: function (data) {
             footer.innerHTML += data;
         },

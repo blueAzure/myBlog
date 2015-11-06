@@ -1,7 +1,7 @@
 $(function () {
     var header = document.getElementById("header");
     $.ajax({
-        url: "/header.html",
+        url: "/assets/header.html",
         success: function (data) {
             header.innerHTML += data;
         },
