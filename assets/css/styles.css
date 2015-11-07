@@ -79,15 +79,30 @@ url('../fonts/kokuri-font/Koruri-Regular-sub.ttf') format('truetype');
 /********************************************************/
 
 html {
-    background: #FFFFFF url(../images/woodBoard.jpg) no-repeat center center fixed;
+    /*background: #FFFFFF url(../images/woodBoard.jpg) no-repeat center center fixed;*/
+    /*background: #F00 center fixed no-repeat, #0F0 center fixed;*/
+
+    background-color: #99d0d4;
+    background-size: 10px;
+    background-image: -webkit-linear-gradient(0, transparent 90%, rgba(255, 255, 255, .25) 50%);
+    background-image: -moz-linear-gradient(0px 50%, transparent 90%, rgba(255, 255, 255, 0.25) 50%);
+    background-image: -ms-linear-gradient(0, transparent 90%, rgba(255, 255, 255, .25) 50%);
+    background-image: -o-linear-gradient(0, transparent 90%, rgba(255, 255, 255, .25) 50%);	
+
+
+
+
     min-height: 100%;
+    /*
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    */
     overflow-y: scroll;
     /* 表示切れない部分はスクロールによって閲覧できる。 Add By.Sugar 2015.06.14 */
 }
+
 
 body {
     background: transparent;
