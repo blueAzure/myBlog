@@ -80,7 +80,7 @@ url('../fonts/kokuri-font/Koruri-Regular-sub.ttf') format('truetype');
 /********************************************************/
 
 html {
-    background: #FFFFFF url(../images/woodBoard.jpg) no-repeat center center fixed;
+    background: #FFFFFF url(../images/woodBoard.jpg) repeat center center fixed;
     /*background: #F00 center fixed no-repeat, #0F0 center fixed;*/
 
     /*background-color: rgba(102,186,183,1);*/
