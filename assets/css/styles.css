@@ -216,7 +216,7 @@ body {
     width: 100%;
     overflow: auto;
     height: 100%;
-    padding: 20px 0 30px 30px;
+    padding: 0px 0 30px 30px;
     display: block; /* noneにする事で、setionのデフォルトを非表示にすることができる。 */
     top: 0;
 }
@@ -288,7 +288,7 @@ a:active {
     font-size: 1.4em;
     line-height: 1.3em;
     font-weight: bold;
-    margin: 30px 0 10px 0;
+    margin: 10px 0 10px 0;
 }
 
 
