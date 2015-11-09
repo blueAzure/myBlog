@@ -2,22 +2,52 @@
                         BLOG created By.Suga
 **********************************************************************/
 
-.dotline-block {
-    color: #000;
-    background: #33b591;
-    padding: 20px;
-    border: 2px dashed rgba(255, 255, 255, 0.5);
-    border-radius: 6px;
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
-    box-shadow: 0 0 0 5px #3cb371;
-    -moz-box-shadow: 0 0 0 5px #3cb371, 0 2px 3px 5px rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: 0 0 0 5px #3cb371, 0 2px 3px 5px rgba(0, 0, 0, 0.5);
+#page-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
 }
+#page-top i {
+    background: rgba(50,50,50,0.5);
+    color: #81C7D4;
+    width: 30px;
+    
+    padding: 10px 5px 10px 5px;
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+}
+#page-top i:hover {
+    background: #666;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .pocket-btn {
     width: 80px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /********************** .post-info-list  **********************/
@@ -119,4 +149,3 @@
 .post-id {
     visibility: hidden;
 }
-
