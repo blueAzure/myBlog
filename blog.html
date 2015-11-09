@@ -52,9 +52,6 @@
     <!-- 1st section -->
     <section class="section" id="blog">
         <div class="container">
-            <h1 class="title">Blog</h1>
-            <h2 class="subtitle">-subtitle-</h2>
-            <hr>
 
             <h3 class="tagline">記事一覧</h3>
 
@@ -104,22 +101,22 @@
             <!-- isotope table -->
             <div class="isotope-article-table">
 
-                <a href="./blogPages/testBlogPage.html" class="post-item" style="border: solid 1px; border-color: black;">
+                <a href="./blogPages/testBlogPage.html" class="post-item">
                 </a>
 
-                <a href="./blogPages/blog-entry-1.html" class="post-item box-effect shadow-effect">
+                <a href="./blogPages/blog-entry-1.html" class="post-item">
                 </a>
 
-                <a href="./blogPages/blog-entry-2.html" class="post-item box-effect shadow-effect">
+                <a href="./blogPages/blog-entry-2.html" class="post-item">
                 </a>
 
-                <a href="./blogPages/blog-entry-3.html" class="post-item box-effect shadow-effect">
+                <a href="./blogPages/blog-entry-3.html" class="post-item">
                 </a>
 
-                <a href="./blogPages/blog-entry-4.html" class="post-item box-effect shadow-effect">
+                <a href="./blogPages/blog-entry-4.html" class="post-item">
                 </a>
 
-                <a href="./blogPages/blog-entry-5.html" class="post-item box-effect shadow-effect">
+                <a href="./blogPages/blog-entry-5.html" class="post-item">
                 </a>
             </div>
 
@@ -139,7 +136,7 @@
 
     <!-- bootstrap -->
     <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-    
+
     <!-- load header from header.html -->
     <script type="text/javascript" src="/assets/js/load-header.js"></script>
 
@@ -147,15 +144,18 @@
     <script type="text/javascript" src="assets/js/isotope.pkgd.min.js"></script>
     <script type="text/javascript">
         $(function () {
-            $('.isotope-article-table').isotope({
-                itemSelector: '.post-item',
-                getSortData: {
-                    postID: ".post-ID parseInt",
-                    lastUpdatedDate: ".post-lastDate"
-                },
-                masonry: {
-                    columnWidth: 10
-                }
+
+            $(window).load(function () {
+                $('.isotope-article-table').isotope({
+                    itemSelector: '.post-item',
+                    getSortData: {
+                        postID: ".post-ID parseInt",
+                        lastUpdatedDate: ".post-lastDate"
+                    },
+                    masonry: {
+                        columnWidth: 10
+                    }
+                });
             });
         });
     </script>

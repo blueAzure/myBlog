@@ -46,7 +46,7 @@
 
 /*************************** .post  ***************************/
 
-.post {
+#post {
     margin: 10px 0 10px 0;
     padding: 20px;
     border: 2px solid #666;
@@ -62,7 +62,7 @@
 
 /************************* .post-title **************************/
 
-.post-title {
+#post-title {
     display: block;
     width: 100%;
     margin: 10px 0 25px 0;
@@ -71,34 +71,29 @@
     letter-spacing: 1px;
 }
 
-.post-title a {
+#post-title a {
     color: #003366;
 }
 
 
 /************************* .post-date ***************************/
 
-.post-date {}
+#post-date {}
 
 
 /*********************** .post-lastdate *************************/
 
-.post-lastdate {}
+#post-lastdate {}
 
 
 /*************************** .post-tag ***************************/
 
-.post-tag {}
-
-
-/************************* .post-share ***************************/
-
-.post-share {}
+#post-tag {}
 
 
 /************************* .post-overview *************************/
 
-.post-overview {
+#post-overview {
     font-size: 20px;
     margin: 15px 0 50px 0;
     text-align: left;
@@ -107,13 +102,13 @@
 
 /************************* .post-content **************************/
 
-.post-content {
+#post-content {
     font-size: 18px;
     margin: 0 0 60px 0;
     text-align: left;
 }
 
-.post-content h2 {
+#post-content h2 {
     line-height: 1.2;
     font-size: 24px;
     padding-top: 0px;
@@ -123,6 +118,6 @@
 
 /*************************** .post-id ****************************/
 
-.post-id {
+#post-id {
     visibility: hidden;
 }

@@ -8,134 +8,67 @@ BLOG created By.Suga
 
 **********************************************************************/
 
-
-.box-effect{
-    /*border: solid 1px;*/ /* テスト用。後で削除 */
-    /*border-color: black;*/ /* テスト用。後で削除 */
-
-    /* 描画範囲は三角(折りたたんでいる部分)の対角線長にするので、41px/1.4114=29pxとなる。 */
-    /* 最前列のレイヤー : 折りたたみ部分以外の色付けのレイヤー、右上から左下までを開始位置から29px先を始点として色付け。 */
-    /* ２枚目のレイヤー : 41pxにすると少しずれるので、右上から(40px)×(40px)の範囲を対象とする。
-    対象の正方形領域の中心点から 色付け。 */
-    /*  linear-gradient(グラデの方向   , 開始の色     位置, 終了の色       位置) x座標 y座標 繰り返しなし */
-    background: linear-gradient(-135deg, transparent 30px, rgba(219, 219, 219, 0.35) 0) 100% 0 no-repeat,
-        linear-gradient(-135deg, transparent 50%, rgba(219, 219, 219, 0.35) 0) 100% 0% no-repeat !important;
-    background-size: auto, 40px 40px !important;
-    background-repeat: no-repeat !important;
-
-}
-
-.box-effect-shadow{
-    content: "";
-}
-
-.box-effect-shadow::after{
-    content: "";
-    width: 450px;
-    height: 238px; /* 278-40=238px */
-    position: absolute;
-    z-index: -1;
-    bottom: 0px;
-    right: 0px;
-    
-    -webkit-box-shadow:0 4px 4px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.3);
-    -moz-box-shadow:0 4px 4px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.3);
-    box-shadow:4px 4px 2px rgba(0,0,0,0.3), 4px 4px 2px rgba(0,0,0,0.3);
-}
-
-
-
-.box-effect-shadow::before{
-    content: "";
-    width: 40px;
-    height: 40px;
-    /*
-    border-style: solid;
-    border-width: 0 40px 40px 0;
-    border-color: transparent transparent transparent transparent; 
-    */
-    
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    box-shadow: -4px 4px 2px rgba(0,0,0,0.3);
-    
-    background: linear-gradient(to left bottom, transparent 40%, rgba(255, 255, 255, 0.85) 45%, rgba(219, 219, 219, 0.35) 50%) no-repeat !important;*/
-    /*background: red;*/
-    background-size: auto;
-    
-}
-
-
 .post-item {
-    text-align: center;
-    font-family: Koruri Regular,Georgia, serif;
     margin: 10px;
     padding: 10px;
+    border: 2px solid #81C7D4;
+    background-color: rgba(219, 219, 219, 0.35);
+    text-align: center;
+    font-family: Koruri Regular, Georgia, serif;
     font-size: 20px;
-    background: rgba(219, 219, 219, 0.45);
-    position: relative;
-    
     width: 450px;
     height: 278px;
+    -moz-box-shadow: 0 2px 3px 5px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 2px 3px 5px rgba(0, 0, 0, 0.5);
+    position: relative;
 }
 
+.post-item:hover {}
 
-
-.post-item:hover {
-
-}
-
-
-
-ul.isotope-filter, ul.isotope-sort{
+ul.isotope-filter,
+ul.isotope-sort {
     margin: 10px 0 10px 0;
-    padding: 0px;	
+    padding: 0px;
     height: 30px;
     background: url(../../assets/images/tabDivider.png) no-repeat bottom center;
     text-align: center;
 }
 
-ul.isotope-filter li, ul.isotope-sort li{
+ul.isotope-filter li,
+ul.isotope-sort li {
     display: block;
     padding: 0;
     margin: 0 30px 0 0;
     display: inline-block;
 }
 
-ul.isotope-filter li a, ul.isotope-sort li a{ 
-    display:block;
-    font-size:12px;
+ul.isotope-filter li a,
+ul.isotope-sort li a {
+    display: block;
+    font-size: 12px;
     height: 30px;
-    line-height:30px;
-    text-align:center;
+    line-height: 30px;
+    text-align: center;
     padding: 0 0 0 10px;
 }
 
-
-.post-lastDate{
+.post-lastDate {
     font-size: 14px;
     visibility: hidden;
 }
 
-
-.post-date{
+.post-date {
     /*position: absolute;*/
     font-size: 14px;
 }
 
-
-.post-id{
-    visibility: hidden;   
+.post-id {
+    visibility: hidden;
 }
 
-
-.post-views{
-    visibility: hidden;   
+.post-views {
+    visibility: hidden;
 }
-
 
 .isotope-article-table {
     -webkit-transition-duration: 0.2s;
@@ -169,5 +102,3 @@ ul.isotope-filter li a, ul.isotope-sort li a{
     margin: 0 0 50px 0;
     text-align: left;
 }
-
-

@@ -5,6 +5,36 @@
 
 
 
+
+
+
+.post-item {
+    text-align: center;
+    font-family: Koruri Regular,Georgia, serif;
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    background: rgba(219, 219, 219, 0.45);
+    position: relative;
+
+    width: 450px;
+    height: 278px;
+}
+
+.box-effect {
+    /* 描画範囲は三角(折りたたんでいる部分)の対角線長にするので、41px/1.4114=29pxとなる。 */
+    /* 最前列のレイヤー : 折りたたみ部分以外の色付けのレイヤー、右上から左下までを開始位置から29px先を始点として色付け。 */
+    /* ２枚目のレイヤー : 41pxにすると少しずれるので、右上から(40px)×(40px)の範囲を対象とする。
+    対象の正方形領域の中心点から 色付け。 */
+    /*  linear-gradient(グラデの方向   , 開始の色     位置, 終了の色       位置) x座標 y座標 繰り返しなし */
+    background: linear-gradient(-135deg, transparent 30px, rgba(219, 219, 219, 0.35) 0) 100% 0 no-repeat, linear-gradient(-135deg, transparent 50%, rgba(219, 219, 219, 0.35) 0) 100% 0% no-repeat !important;
+    background-size: auto, 40px 40px !important;
+    background-repeat: no-repeat !important;
+}
+
+
+
+
 .dotline-block {
     color: #000;
     background: #33b591;
