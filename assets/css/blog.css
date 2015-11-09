@@ -7,47 +7,24 @@
     bottom: 20px;
     right: 20px;
 }
+
 #page-top i {
-    background: rgba(50,50,50,0.5);
+    background: rgba(50, 50, 50, 0.5);
     color: #81C7D4;
     width: 30px;
-    
     padding: 10px 5px 10px 5px;
     text-align: center;
     display: block;
     border-radius: 5px;
 }
+
 #page-top i:hover {
     background: #666;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 .pocket-btn {
     width: 80px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /********************** .post-info-list  **********************/
