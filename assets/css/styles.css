@@ -27,6 +27,7 @@ hr.line-fade{
     border: 0;
     height: 2px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(50, 50, 50, 0.75), rgba(0, 0, 0, 0));
+    
 }
 
 
@@ -79,26 +80,13 @@ url('../fonts/kokuri-font/Koruri-Regular-sub.ttf') format('truetype');
 /********************************************************/
 
 html {
-    /*background: #FFFFFF url(../images/woodBoard.jpg) no-repeat center center fixed;*/
+    background: #FFFFFF url(../images/woodBoard.jpg) no-repeat center center fixed;
     /*background: #F00 center fixed no-repeat, #0F0 center fixed;*/
 
-    background-color: #99d0d4;
-    background-size: 10px;
-    background-image: -webkit-linear-gradient(0, transparent 90%, rgba(255, 255, 255, .25) 50%);
-    background-image: -moz-linear-gradient(0px 50%, transparent 90%, rgba(255, 255, 255, 0.25) 50%);
-    background-image: -ms-linear-gradient(0, transparent 90%, rgba(255, 255, 255, .25) 50%);
-    background-image: -o-linear-gradient(0, transparent 90%, rgba(255, 255, 255, .25) 50%);	
+    /*background-color: rgba(102,186,183,1);*/
+    /*background-color: #81C7D4;*/
 
-
-
-
-    min-height: 100%;
-    /*
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    */
+    
     overflow-y: scroll;
     /* 表示切れない部分はスクロールによって閲覧できる。 Add By.Sugar 2015.06.14 */
 }
@@ -258,7 +246,7 @@ a:active {
 .subtitle {
     font-family: 'Wire One', Helvetica, Arial, sans-serif;
     font-weight: normal;
-    font-size: 80px;
+    font-size: 90px;
     margin-bottom: 10px;
     color: #FDF9F4;
     line-height: 1em;

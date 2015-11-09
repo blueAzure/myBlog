@@ -2,33 +2,39 @@
                         BLOG created By.Suga
 **********************************************************************/
 
+.dotline-block {
+    color: #000;
+    background: #33b591;
+    padding: 20px;
+    border: 2px dashed rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    box-shadow: 0 0 0 5px #3cb371;
+    -moz-box-shadow: 0 0 0 5px #3cb371, 0 2px 3px 5px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 0 5px #3cb371, 0 2px 3px 5px rgba(0, 0, 0, 0.5);
+}
 
-
-
-.pocket-btn{
+.pocket-btn {
     width: 80px;
 }
 
 
-
-
-
 /********************** .post-info-list  **********************/
-.post-info-list{
-    font-size:13px;
-    padding:0;
-    border:none;
-    list-style-type:none;
+
+.post-info-list {
+    font-size: 13px;
+    padding: 0;
+    border: none;
+    list-style-type: none;
 }
 
-.post-info-list li{
-    float:right;
-    margin-right:10px;
-    text-align:center;
-    line-height:0;
+.post-info-list li {
+    float: right;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 0;
 }
-
-
 
 
 /*************************** .post  ***************************/
@@ -42,6 +48,8 @@
     font-family: 'Koruri Regular';
     height: 200;
     width: 400;
+    -moz-box-shadow: 0 2px 3px 5px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 2px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -61,31 +69,24 @@
 }
 
 
-
 /************************* .post-date ***************************/
-.post-date{
 
-}
+.post-date {}
 
 
 /*********************** .post-lastdate *************************/
-.post-lastdate{
 
-}
+.post-lastdate {}
 
 
 /*************************** .post-tag ***************************/
-.post-tag{
 
-}
-
+.post-tag {}
 
 
 /************************* .post-share ***************************/
-.post-share{
 
-}
-
+.post-share {}
 
 
 /************************* .post-overview *************************/
@@ -113,9 +114,9 @@
 }
 
 
-
 /*************************** .post-id ****************************/
-.post-id{
+
+.post-id {
     visibility: hidden;
 }
 
