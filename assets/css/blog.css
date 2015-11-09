@@ -2,14 +2,69 @@
                         BLOG created By.Suga
 **********************************************************************/
 
-
-
-
-
-.post-id{
-    visibility: hidden;
+#page-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+#page-top i {
+    background: rgba(50,50,50,0.5);
+    color: #81C7D4;
+    width: 30px;
+    
+    padding: 10px 5px 10px 5px;
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+}
+#page-top i:hover {
+    background: #666;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+.pocket-btn {
+    width: 80px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************** .post-info-list  **********************/
+
+.post-info-list {
+    font-size: 13px;
+    padding: 0;
+    border: none;
+    list-style-type: none;
+}
+
+.post-info-list li {
+    float: right;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 0;
+}
 
 
 /*************************** .post  ***************************/
@@ -23,10 +78,12 @@
     font-family: 'Koruri Regular';
     height: 200;
     width: 400;
+    -moz-box-shadow: 0 2px 3px 5px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 2px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 
-/************************* .post-title  *************************/
+/************************* .post-title **************************/
 
 .post-title {
     display: block;
@@ -42,16 +99,36 @@
 }
 
 
-/************************* .post-overview  *************************/
+/************************* .post-date ***************************/
+
+.post-date {}
+
+
+/*********************** .post-lastdate *************************/
+
+.post-lastdate {}
+
+
+/*************************** .post-tag ***************************/
+
+.post-tag {}
+
+
+/************************* .post-share ***************************/
+
+.post-share {}
+
+
+/************************* .post-overview *************************/
 
 .post-overview {
     font-size: 20px;
-    margin: 0 0 50px 0;
+    margin: 15px 0 50px 0;
     text-align: left;
 }
 
 
-/************************* .post-content  *************************/
+/************************* .post-content **************************/
 
 .post-content {
     font-size: 18px;
@@ -66,3 +143,9 @@
     margin-bottom: 10px;
 }
 
+
+/*************************** .post-id ****************************/
+
+.post-id {
+    visibility: hidden;
+}

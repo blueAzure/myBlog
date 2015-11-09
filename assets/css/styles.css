@@ -13,9 +13,42 @@ Contents List={
 
 
 
+
+
+
+
+
 ul li{
     margin-bottom:0.3em;
 }
+
+
+hr.line-fade{
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(50, 50, 50, 0.75), rgba(0, 0, 0, 0));
+    
+}
+
+
+
+
+
+
+
+/********************************************************/
+/*                      clearfix                        */
+/********************************************************/
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.clearfix {
+    zoom: 1; /* for IE6/7 */
+}
+
+
 
 
 
@@ -48,14 +81,16 @@ url('../fonts/kokuri-font/Koruri-Regular-sub.ttf') format('truetype');
 
 html {
     background: #FFFFFF url(../images/woodBoard.jpg) no-repeat center center fixed;
-    min-height: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    /*background: #F00 center fixed no-repeat, #0F0 center fixed;*/
+
+    /*background-color: rgba(102,186,183,1);*/
+    /*background-color: #81C7D4;*/
+
+    
     overflow-y: scroll;
     /* 表示切れない部分はスクロールによって閲覧できる。 Add By.Sugar 2015.06.14 */
 }
+
 
 body {
     background: transparent;
@@ -84,7 +119,7 @@ body {
 .mainmenu {
     z-index: 999999;
     width: 90%;
-    padding: 20px 0 0 0;
+    padding: 30px 0 0 20px;
     position: fixed;
 }
 
@@ -207,27 +242,22 @@ a:active {
     text-decoration: underline;
 }
 
-.lead {
-    font-weight: normal;
-    font-size: 1.5em;
-    line-height: 1.2em;
-}
-
 .title,
 .subtitle {
     font-family: 'Wire One', Helvetica, Arial, sans-serif;
     font-weight: normal;
-    font-size: 7em;
-    margin-bottom: 15px;
+    font-size: 90px;
+    margin-bottom: 10px;
     color: #FDF9F4;
     line-height: 1em;
+    -webkit-mask-image:-webkit-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,1));
 }
 
 .subtitle {
-    line-height: .9em;
-    font-size: 3.0em;
+    /*line-height: .9em;*/
+    font-size: 50px;
     margin-top: 0;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .tagline {
@@ -235,12 +265,6 @@ a:active {
     line-height: 1.3em;
     font-weight: bold;
     margin: 30px 0 10px 0;
-}
-
-@media (max-width: 800px) {
-    .lead {
-        font-size: 1.3em;
-    }
 }
 
 
