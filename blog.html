@@ -122,7 +122,7 @@
                 -->
 
                 <a href="./blogPages/blog-entry-6.html" class="post-item">
-                    <img src="https://placehold.jp/3d4070/ffffff/80x80.png?text=No%20Image" style="margin:10px; width:80px; height:80px; border:solid; border-width:1px; float:left;">
+                    <img style="margin:10px; width:80px; height:80px; border:solid; border-width:1px; float:left;">
                 </a>
                 
             </div>
@@ -260,15 +260,19 @@
                         
                         // post-tag
                         postItemArray.item(j).className += " " + postTag;
-                        
-                        
-                        // あるpost-itemクラス下のimgタグを取得し、imgのリンク先を[https://placehold.jp/000dff/ffffff/150x150.png]に書き換えるテスト
-                        // 後日、タグに合わせた画像を自動で追加するスクリプトになるように修正すること。
-                        if(postTag != "other"){
-                            postItemArray.item(j).getElementsByTagName('img').item(0).setAttribute("src", "/assets/images/blueGear.png")
+
+                        // イメージ画像の追加
+                        var imageTag = postItemArray.item(j).getElementsByTagName('img').item(0);
+                        if(postTag == "developmentBlog"){ 
+                            imageTag.setAttribute("src", "/assets/images/blueGear.png")
+                        }
+                        else if(postTag == "other"){
+                            imageTag.setAttribute("src", "https://placehold.jp/3d4070/ffffff/80x80.png?text=Other");
+                        }
+                        else{ // No Image
+                            imageTag.setAttribute("src", "https://placehold.jp/3d4070/ffffff/80x80.png?text=No%20Image");
                         }
                         
-
                         // 確認用
                         //window.alert("getTitle:" + postTitle + "\n" + "in:" + postItemArray.item(j));
                         //window.alert("getID:" + postID);
