@@ -101,8 +101,8 @@
             <!-- isotope table -->
             <div class="isotope-article-table">
 
+                <!--
                 <a href="./blogPages/testBlogPage.html" class="post-item">
-                    <img src="https://placehold.jp/80x80.png" style="margin:10px;">
                 </a>
 
                 <a href="./blogPages/blog-entry-1.html" class="post-item">
@@ -119,9 +119,12 @@
 
                 <a href="./blogPages/blog-entry-5.html" class="post-item">
                 </a>
+                -->
 
                 <a href="./blogPages/blog-entry-6.html" class="post-item">
+                    <img src="https://placehold.jp/3d4070/ffffff/80x80.png?text=No%20Image" style="margin:5px; width:80px; height:80px; border:solid; border-width:1px; float:left;">
                 </a>
+                
             </div>
 
         </div>
@@ -213,25 +216,55 @@
                     dataType: 'html',
                     url: postItemArray.item(j),
                     success: function (data) {
-                        var postTitle = $(data).find('.post-title').text();
-                        var postID = $(data).find('.post-id').text();
-                        var postDate = $(data).find('.post-date').text();
-                        var postLastDate = $(data).find('.post-lastDate').text();
-                        var postViews = $(data).find('.post-views').text();
-                        var postOverview = $(data).find('.post-overview').text();
-                        var postTag = $(data).find('.post-tag').text();
-                        if (postLastDate == null) {
-                            postLastDate = postDate;
-                        }
+                        var postTitle = $(data).find('#post-title').text();
+                        var postID = $(data).find('#post-id').text();
+                        var postDate = $(data).find('#post-date').text();
+                        var postLastDate = $(data).find('#post-lastDate').text();
+                        var postViews = $(data).find('#post-views').text();
+                        var postOverview = $(data).find('#post-overview').text();
+                        var postTag = $(data).find('#post-tag').text();
 
                         var postItemArray = document.getElementsByClassName("post-item");
-                        postItemArray.item(j).innerHTML += '<div class=\"post-title\"">' + postTitle + "</div>";
-                        postItemArray.item(j).innerHTML += '<div class=\"post-date\"">' + postDate + "</div>";
-                        postItemArray.item(j).innerHTML += '<div class=\"post-lastDate\"">' + postLastDate + "</div>";
-                        postItemArray.item(j).innerHTML += '<span class=\"post-views\"">' + postViews + "</span>";
-                        postItemArray.item(j).innerHTML += '<div class=\"post-overview\"">' + postOverview + "</div>";
-                        postItemArray.item(j).innerHTML += '<span class=\"post-id\"">' + postID + "</span>";
+
+                        // post-title
+                        var element = document.createElement("div");
+                        element.className = "post-title";
+                        element.innerHTML = postTitle;
+                        postItemArray.item(j).appendChild(element);
+                        
+                        // post-date
+                        var element2 = document.createElement("div");
+                        element2.className = "post-date";
+                        element2.innerHTML = postDate;
+                        postItemArray.item(j).appendChild(element2);
+                                                
+                        // post-lastDate
+                        if (postLastDate != null) {
+                            var element3 = document.createElement("div");
+                            element3.className = "post-lastDate";
+                            element3.innerHTML = postLastDate;
+                            postItemArray.item(j).appendChild(element3);
+                        }
+                        
+                        // post-overview
+                        var element5 = document.createElement("div");
+                        element5.className = "post-overview";
+                        element5.innerHTML = postOverview;
+                        postItemArray.item(j).appendChild(element5);
+                        
+                        // post-id
+                        var element6 = document.createElement("div");
+                        element6.className = "post-id";
+                        element6.innerHTML = postID;
+                        postItemArray.item(j).appendChild(element6);
+                        
+                        // post-tag
                         postItemArray.item(j).className += " " + postTag;
+                        
+                        
+                        // あるpost-itemクラス下のimgタグを取得し、imgのリンク先を[https://placehold.jp/000dff/ffffff/150x150.png]に書き換えるテスト
+                        postItemArray.item(j).getElementsByTagName('img').item(0).setAttribute("src", "/assets/images/blueGear.png")
+                        
 
                         // 確認用
                         //window.alert("getTitle:" + postTitle + "\n" + "in:" + postItemArray.item(j));

@@ -54,7 +54,6 @@ ul.isotope-sort li a {
 
 .post-lastDate {
     font-size: 14px;
-    visibility: hidden;
 }
 
 .post-date {
@@ -63,11 +62,6 @@ ul.isotope-sort li a {
 }
 
 .post-id {
-    visibility: hidden;
-}
-
-.post-views {
-    visibility: hidden;
 }
 
 .isotope-article-table {
@@ -99,6 +93,6 @@ ul.isotope-sort li a {
 
 .post-overview {
     font-size: 16px;
-    margin: 0 0 50px 0;
+    margin: 0 0 10px 0;
     text-align: left;
 }
