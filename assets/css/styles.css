@@ -97,7 +97,6 @@ body {
     min-height: 100%;
     -webkit-font-smoothing: antialiased;
     -webkit-overflow-scrolling: touch;
-    line-height: 1.5em;
     font-size: 15px;
     font-family: Koruri Regular, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
     color: #fff;
@@ -247,7 +246,6 @@ a:active {
     font-weight: normal;
     font-size: 90px;
     margin-bottom: 10px;
-    line-height: 1em;
 
     color: #81C7D4;
     text-shadow:
@@ -272,13 +270,11 @@ a:active {
     font-size: 90px;
     margin-bottom: 10px;
     color: #FDF9F4;
-    line-height: 1em;
     -webkit-mask-image: -webkit-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,1));
     mask-image: linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,1));
 }
 
 .subtitle {
-    /*line-height: .9em;*/
     font-size: 50px;
     margin-top: 0;
     margin-bottom: 20px;
@@ -286,7 +282,6 @@ a:active {
 
 .tagline {
     font-size: 1.4em;
-    line-height: 1.3em;
     font-weight: bold;
     margin: 10px 0 10px 0;
 }
