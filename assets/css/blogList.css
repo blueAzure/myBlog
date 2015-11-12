@@ -59,8 +59,6 @@ BLOG created By.Suga
     margin: 5px;
     width: 80px;
     height: 80px;
-    border: solid;
-    border-width: 1px;
     float: left;
 }
 
@@ -118,10 +116,6 @@ ul.isotope-sort li a {
     text-align: left;
     font-size: 30px;
     letter-spacing: 1px;
-    border: solid #fff;
-    /* 実験用 */
-    border-width: 1px;
-    /* 実験用 */
 }
 
 .post-title a {
@@ -134,11 +128,10 @@ ul.isotope-sort li a {
 .post-overview {
     font-size: 16px;
     margin: 5px;
+    padding: 5px 5px 10px 5px;
     text-align: left;
-    border: solid #fff;
-    /* 実験用 */
+    border: solid #000;
     border-width: 1px;
-    /* 実験用 */
     width: 410px;
     /* とりあえず打ち込んだ適当な値。 */
     height: 130px;
