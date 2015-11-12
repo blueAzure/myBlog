@@ -53,12 +53,28 @@ ul.isotope-sort li a {
 }
 
 .post-lastDate {
-    font-size: 14px;
+    font-size: 10px;
+
+    border: solid #fff; /* 実験用 */
+    border-width: 2px; /* 実験用 */
+    width: 410px; /* とりあえず打ち込んだ適当な値。 */
+    height: 15px; /* とりあえず打ち込んだ適当な値。 */
+    text-align: left;
+    margin-left: 5px;
+    vertical-align: top;
 }
 
 .post-date {
     /*position: absolute;*/
-    font-size: 14px;
+    font-size: 10px;
+
+    border: solid #fff; /* 実験用 */
+    border-width: 2px; /* 実験用 */
+    width: 410px; /* とりあえず打ち込んだ適当な値。 */
+    height: 15px; /* とりあえず打ち込んだ適当な値。 */
+    text-align: left;
+    margin-left: 5px;
+    vertical-align: top;
 }
 
 .post-id {
@@ -78,11 +94,15 @@ ul.isotope-sort li a {
 
 .post-title {
     display: block;
-    width: 100%;
-    margin: 5px;
+    width: 410px; /* とりあえず打ち込んだ適当な値。 */
+    height: 55px; /* とりあえず打ち込んだ適当な値。 */
+    margin: 5px 5px 0 5px;
     text-align: left;
-    font-size: 40px;
+    font-size: 30px;
     letter-spacing: 1px;
+    
+    border: solid #fff; /* 実験用 */
+    border-width: 2px; /* 実験用 */
 }
 
 .post-title a {
