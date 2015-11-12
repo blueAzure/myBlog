@@ -56,7 +56,7 @@ ul.isotope-sort li a {
     font-size: 10px;
 
     border: solid #fff; /* 実験用 */
-    border-width: 2px; /* 実験用 */
+    border-width: 1px; /* 実験用 */
     width: 410px; /* とりあえず打ち込んだ適当な値。 */
     height: 15px; /* とりあえず打ち込んだ適当な値。 */
     text-align: left;
@@ -69,7 +69,7 @@ ul.isotope-sort li a {
     font-size: 10px;
 
     border: solid #fff; /* 実験用 */
-    border-width: 2px; /* 実験用 */
+    border-width: 1px; /* 実験用 */
     width: 410px; /* とりあえず打ち込んだ適当な値。 */
     height: 15px; /* とりあえず打ち込んだ適当な値。 */
     text-align: left;
@@ -102,7 +102,7 @@ ul.isotope-sort li a {
     letter-spacing: 1px;
     
     border: solid #fff; /* 実験用 */
-    border-width: 2px; /* 実験用 */
+    border-width: 1px; /* 実験用 */
 }
 
 .post-title a {
@@ -114,6 +114,11 @@ ul.isotope-sort li a {
 
 .post-overview {
     font-size: 16px;
-    margin: 0 0 10px 0;
+    margin: 5px;
     text-align: left;
+
+    border: solid #fff; /* 実験用 */
+    border-width: 1px; /* 実験用 */
+    width: 410px; /* とりあえず打ち込んだ適当な値。 */
+    height: 150px; /* とりあえず打ち込んだ適当な値。 */
 }
