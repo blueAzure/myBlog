@@ -129,11 +129,24 @@
                 
                 <a href="./blogPages/blog-entry-6.html" class="post-item">
                     <img style="margin:5px; width:80px; height:80px; border:solid; border-width:1px; float:left;" class="clearfix">
+                    <div class="post-title"></div>
+                    <div class="post-date"></div>
+                    <div class="post-lastDate"></div>
+                    <div class="post-tag"></div>
+                    <div class="post-overview"></div>
+                    <div class="post-id"></div>
+                    <div class="more">read more...</div>
                 </a>
                 
-
                 <a class="post-item">
                     <img style="margin:5px; width:80px; height:80px; border:solid; border-width:1px; float:left;" class="clearfix">
+                    <div class="post-title"></div>
+                    <div class="post-date"></div>
+                    <div class="post-lastDate"></div>
+                    <div class="post-tag"></div>
+                    <div class="post-overview"></div>
+                    <div class="post-id"></div>
+                    <div class="more">read more...</div>
                 </a>
 
             </div>
@@ -238,72 +251,41 @@
                         var postItemArray = document.getElementsByClassName("post-item");
 
                         // post-title
-                        var element = document.createElement("div");
-                        element.className = "post-title";
-                        element.innerHTML = postTitle;
-                        postItemArray.item(j).appendChild(element);
+                        $(postItemArray.item(j)).find(".post-title").text(postTitle);
                         
                         // post-date
-                        var element2 = document.createElement("div");
-                        var timeTag2 =  document.createElement("time");
-                        element2.className = "post-date";
-                        timeTag2.innerHTML = postDate;
-                        element2.appendChild(timeTag2);
-                        postItemArray.item(j).appendChild(element2);
+                        $(postItemArray.item(j)).find(".post-date").text(postDate);
                                                 
                         // post-lastDate
                         if (postLastDate != null) {
-                            var element3 = document.createElement("div");
-                            var timeTag3 =  document.createElement("time");
-                            element3.className = "post-lastDate";
-                            timeTag3.innerHTML = postLastDate;
-                            element3.appendChild(timeTag3);
-                            postItemArray.item(j).appendChild(element3);
+                            $(postItemArray.item(j)).find(".post-lastDate").text(postLastDate);
+                        }
+                        else{
+                            $(postItemArray.item(j)).find(".post-lastDate").css("display", "none");
                         }
                         
                         // post-overview
-                        var element5 = document.createElement("div");
-                        element5.className = "post-overview";
-                        element5.innerHTML = postOverview;
-                        postItemArray.item(j).appendChild(element5);
+                        $(postItemArray.item(j)).find(".post-overview").text(postOverview);
                         
                         // post-id
-                        var element6 = document.createElement("div");
-                        element6.className = "post-id";
-                        element6.innerHTML = postID;
-                        postItemArray.item(j).appendChild(element6);
+                        $(postItemArray.item(j)).find(".post-id").text(postID);
                         
                         // post-tag
                         postItemArray.item(j).className += " " + postTag;
+                        $(postItemArray.item(j)).find(".post-tag").text(postTag);
 
                         // イメージ画像の追加
-                        var imageTag = postItemArray.item(j).getElementsByTagName('img').item(0);
+                        var imageTag = $(postItemArray.item(j)).find("img");
                         if(postTag == "developmentBlog"){ 
-                            imageTag.setAttribute("src", "/assets/images/blueGear.png")
+                            imageTag.attr("src", "/assets/images/blueGear.png");
                         }
                         else if(postTag == "other"){
-                            imageTag.setAttribute("src", "https://placehold.jp/3d4070/ffffff/80x80.png?text=Other");
+                            imageTag.attr("src", "https://placehold.jp/3d4070/ffffff/80x80.png?text=Other");
                         }
                         else{ // No Image
-                            imageTag.setAttribute("src", "https://placehold.jp/3d4070/ffffff/80x80.png?text=No%20Image");
+                            imageTag.attr("src", "https://placehold.jp/3d4070/ffffff/80x80.png?text=No%20Image");
                         }
                         
-                        // read more
-                        var element7 = document.createElement("a");
-                        element7.className = "more";
-                        element7.innerHTML = "read more...";
-                        postItemArray.item(j).appendChild(element7);
-                        
-                        
-                        
-                        // 確認用
-                        //window.alert("getTitle:" + postTitle + "\n" + "in:" + postItemArray.item(j));
-                        //window.alert("getID:" + postID);
-                        //window.alert("getDate:" + postDate);
-                        //window.alert("getLastDate:" + postLastDate);
-                        //window.alert("getViews:" + postViews);
-                        //window.alert("getOverview:" + postOverview);
-                        //window.alert("getTag:" + postTag);
                     }
                 });
             }
