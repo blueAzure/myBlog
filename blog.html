@@ -245,15 +245,19 @@
                         
                         // post-date
                         var element2 = document.createElement("div");
+                        var timeTag2 =  document.createElement("time");
                         element2.className = "post-date";
-                        element2.innerHTML = postDate;
+                        timeTag2.innerHTML = postDate;
+                        element2.appendChild(timeTag2);
                         postItemArray.item(j).appendChild(element2);
                                                 
                         // post-lastDate
                         if (postLastDate != null) {
                             var element3 = document.createElement("div");
+                            var timeTag3 =  document.createElement("time");
                             element3.className = "post-lastDate";
-                            element3.innerHTML = postLastDate;
+                            timeTag3.innerHTML = postLastDate;
+                            element3.appendChild(timeTag3);
                             postItemArray.item(j).appendChild(element3);
                         }
                         
