@@ -8,6 +8,13 @@ BLOG created By.Suga
 
 **********************************************************************/
 
+
+
+.more{
+    float: right;
+}
+
+
 .post-item {
     margin: 10px;
     padding: 10px;
@@ -78,7 +85,7 @@ ul.isotope-sort li a {
 }
 
 .post-id {
-    visibility: hidden;
+    display: none;
 }
 
 .isotope-article-table {
@@ -120,5 +127,6 @@ ul.isotope-sort li a {
     border: solid #fff; /* 実験用 */
     border-width: 1px; /* 実験用 */
     width: 410px; /* とりあえず打ち込んだ適当な値。 */
-    height: 150px; /* とりあえず打ち込んだ適当な値。 */
+    height: 130px; /* とりあえず打ち込んだ適当な値。 */
+    overflow: hidden;
 }
