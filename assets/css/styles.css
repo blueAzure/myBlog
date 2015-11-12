@@ -140,7 +140,6 @@ body {
     -webkit-transition: all .45s;
     -moz-transition: all .45s;
     transition: all .45s;
-    float: left;
 }
 
 .navbar-toggle .icon-bar {
