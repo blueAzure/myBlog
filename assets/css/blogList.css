@@ -8,6 +8,34 @@ BLOG created By.Suga
 
 **********************************************************************/
 
+
+.post-info-list {
+    font-size: 12px;
+    padding: 0;
+    border: none;
+    list-style-type: none;
+    margin: 0 5px 0 0;
+    width: 420px;
+    height: 13px;
+}
+
+.post-info-list li {
+    float: right;
+    text-align: center;
+    line-height: 0;
+    margin: 0 10px 0 0;
+    /*line-height: 1px;*/
+}
+
+
+
+
+
+
+
+
+
+
 .more {
     float: right;
 }
@@ -63,53 +91,6 @@ ul.isotope-sort li a {
     line-height: 30px;
     text-align: center;
     padding: 0 0 0 10px;
-}
-
-.post-lastDate {
-    font-size: 10px;
-    border: solid #fff;
-    /* 実験用 */
-    border-width: 1px;
-    /* 実験用 */
-    width: 410px;
-    /* とりあえず打ち込んだ適当な値。 */
-    height: 15px;
-    /* とりあえず打ち込んだ適当な値。 */
-    text-align: left;
-    margin-left: 5px;
-    vertical-align: top;
-}
-
-.post-date {
-    /*position: absolute;*/
-    font-size: 10px;
-    border: solid #fff;
-    /* 実験用 */
-    border-width: 1px;
-    /* 実験用 */
-    width: 410px;
-    /* とりあえず打ち込んだ適当な値。 */
-    height: 15px;
-    /* とりあえず打ち込んだ適当な値。 */
-    text-align: left;
-    margin-left: 5px;
-    vertical-align: top;
-}
-
-.post-tag {
-    /*position: absolute;*/
-    font-size: 10px;
-    border: solid #fff;
-    /* 実験用 */
-    border-width: 1px;
-    /* 実験用 */
-    width: 410px;
-    /* とりあえず打ち込んだ適当な値。 */
-    height: 15px;
-    /* とりあえず打ち込んだ適当な値。 */
-    text-align: left;
-    margin-left: 5px;
-    vertical-align: top;
 }
 
 .post-id {
