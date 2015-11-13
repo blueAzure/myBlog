@@ -14,9 +14,17 @@ ul li {
     margin-bottom: 0.3em;
 }
 
+.container hr{
+    margin-top: 5px;
+    margin-bottom: 20px;
+    width: 50%;
+    
+}
+
 hr.line-fade {
     border: 0;
     height: 2px;
+    width: 100%;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(50, 50, 50, 0.75), rgba(0, 0, 0, 0));
     background-image: -webkit-linear-gradient(to right, rgba(0, 0, 0, 0), rgba(50, 50, 50, 0.75), rgba(0, 0, 0, 0));
 }
@@ -229,29 +237,19 @@ a:active {
     margin-bottom: 10px;
     color: #81C7D4;
     text-shadow: 0px 1px 0 #5F5F5D, -1px -1px 0 #5F5F5D, 1px -1px 0 #5F5F5D, 1px 1px 0 #5F5F5D, -1px 0px 0 #5F5F5D;
-    /* bottomからtopへ向けて少しフェードするエフェクト
-    -webkit-mask-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1));
-    mask-image: linear-gradient(top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1));
-    */
 }
-
-.main-theme .title {}
 
 .subtitle {
     font-family: 'Wire One', Helvetica, Arial, sans-serif;
     font-weight: normal;
-    font-size: 90px;
-    margin-bottom: 10px;
+    font-size: 60px;
+    margin-top: 30px;
+    margin-bottom: 20px;
     color: #FDF9F4;
     -webkit-mask-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1));
     mask-image: linear-gradient(top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1));
 }
 
-.subtitle {
-    font-size: 50px;
-    margin-top: 0;
-    margin-bottom: 20px;
-}
 
 .tagline {
     font-size: 1.4em;
