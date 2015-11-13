@@ -7,16 +7,16 @@
     <meta name="description" content="">
     <meta name="author" content="SugarArt">
 
-    <title>SugarArtBlog</title>
+    <title>testBlogPage</title>
 
-    <link rel="shortcut icon" href="../assets/images/icon.ico">
+    <link rel="shortcut icon" href="/assets/images/icon.ico">
 
     <!-- Bootstrap itself -->
     <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
     <!-- Styles Sheet (CSS) -->
-    <link rel="stylesheet" type="text/css" href="../assets/css/styles.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/blog.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/blog.css">
 
     <!-- icon -->
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -48,40 +48,96 @@
     <!-- header -->
     <div id="header"></div>
 
-    <section class="section" id="blog">
+    <section class="section" id="blogPost">
         <div class="container">
-            <h1 class="title">Blog</h1>
-            <h2 class="subtitle">-subtitle-</h2>
-            <hr>
 
-            <!-- 記事 -->
-            <article class="post">
-                <div class="post-title">どこのサービスでホスティングを行うか</div>
+            <article id="post">
+                <!-- 記事タイトル -->
+                <div id="post-title">どこのサービスでホスティングを行うか</div>
 
-                <div class="post-tag">developmentBlog</div>
-                
-                <div class="post-date">12/10/2015</div>
+                <hr style="border-top: 2px dashed">
 
-                <div class="post-id">3</div>
-                
-                <div class="post-overview">
+                <!-- 記事概要 -->
+                <div id="post-overview">
                     今後、どこのサービスを用いてwebページを公開するか。
                 </div>
 
-                <div class="post-content">
+
+                <!-- 記事本文 -->
+                <div id="post-content">
                     <p>
                         9月の中旬に知ったのですが、現在私が使用しているGoogleDriveのホスティングサービスが2016.8.31に終了してしまうそうです。 私は普段からGoogleDriveを使用していたので、この機能を用いたwebページ構築は非常に敷居が低く、大変ありがたく思っていました。 しかし、後１年ほどでこのサービスが使えなくなってしまうということで、別のサービスを探す必要に迫られました。 現在はgithub、またはDropBoxを用いることを考えていますが、どうすべきでしょうか...
                     </p>
                     <p>
                         <a href="https://support.google.com/drive/answer/2881970?hl=en">
-                            [https://support.google.com/drive/answer/2881970?hl=en]
-                            [https://support.google.com/drive/answer/2881970?hl=ja]
-                        </a>
+                                [https://support.google.com/drive/answer/2881970?hl=en]
+                                [https://support.google.com/drive/answer/2881970?hl=ja]
+                            </a>
                     </p>
                 </div>
+                <!-- 記事本文ここまで -->
+
+
+
+                <hr style="border-top: 2px dashed">
+
+                <!-- postInfo -->
+                <ul class="post-info-list clearfix">
+
+                    <li>
+                        <i class="fa fa-clock-o"></i> 投稿日:
+                        <time datetime="4/11/2015" id="post-date">2015-10-12</time>
+                    </li>
+
+                    <li>
+                        <i class="fa fa-tag"></i> tag:
+                        <span id="post-tag">developmentBlog</span>
+                    </li>
+
+                    <li id="post-id">
+                        <i class="fa fa-cube"></i> 3
+                    </li>
+                </ul>
+
+
+                <ul class="post-info-list clearfix">
+
+                    <li>
+                        <!-- pocket get button -->
+                        <a data-pocket-label="pocket" data-pocket-count="horizontal" data-pocket-align="left" class="pocket-btn"></a>
+                    </li>
+
+                    <li>
+                        <!-- twitter share button -->
+                        <a class="twitter-share-button" href="https://twitter.com/share" data-dnt="true"></a>
+                    </li>
+
+                    <li>
+                        <!-- facebook share button -->
+                        <div class="fb-like" data-href="#" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+                    </li>
+
+                    <li>
+                        <!-- googlePlus share button -->
+                        <div class="g-plus" data-action="share" data-annotation="bubble" data-href="#"></div>
+                    </li>
+                </ul>
+
+
             </article>
 
         </div>
+
+        <!-- footer -->
+        <div id="footer"></div>
+
+        <div id="page-top">
+            <a href=".post-title">
+                <i class="fa fa-angle-double-up fa-2x"></i>
+            </a>
+        </div>
+
+
     </section>
 
 
@@ -91,7 +147,7 @@
 
     <!-- Load javascript libraries -->
     <!-- JavaScriptのPluginは頻繁に仕様が変わるため、versionの変更の際には注意すること。 -->
-    
+
     <!-- jQuery -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
@@ -100,14 +156,44 @@
 
     <!-- load header from header.html -->
     <script type="text/javascript" src="/assets/js/load-header.js"></script>
-    
+
+    <!-- load header from footer.html -->
+    <script type="text/javascript" src="/assets/js/load-footer.js"></script>
+
+    <!-- load sns share button -->
+    <script type="text/javascript" src="/assets/js/share-button.js"></script>
+    <div id="fb-root"></div>
+
+    <script type="text/javascript">
+        $(function () {
+            var topBtn = $('#page-top');
+            topBtn.hide();
+            //スクロールが100に達したらボタン表示
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    topBtn.fadeIn();
+                } else {
+                    topBtn.fadeOut();
+                }
+            });
+            //スクロールしてトップ
+            topBtn.click(function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 500);
+                return false;
+            });
+        });
+    </script>
+
+
     <!-- FancyBox -->
-    <script type="text/javascript" src="../assets/js/jquery.fancybox.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery.fancybox.js "></script>
     <script type="text/javascript">
         $(document).ready(function () { // fancybox Default
             $('.fancybox').fancybox();
         });
-        jQuery("a.iframe").fancybox({ // fancybox iFrame
+        jQuery("a.iframe ").fancybox({ // fancybox iFrame
             'width': '80%',
             'height': '80%',
             'autoScale': false,
