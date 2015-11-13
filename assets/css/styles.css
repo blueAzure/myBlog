@@ -10,20 +10,11 @@ Contents List={
     }
 */
 
-
-
-
-
-
-
-
-
-ul li{
-    margin-bottom:0.3em;
+ul li {
+    margin-bottom: 0.3em;
 }
 
-
-hr.line-fade{
+hr.line-fade {
     border: 0;
     height: 2px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(50, 50, 50, 0.75), rgba(0, 0, 0, 0));
@@ -31,45 +22,40 @@ hr.line-fade{
 }
 
 
-
-
-
-
-
 /********************************************************/
+
+
 /*                      clearfix                        */
+
+
 /********************************************************/
+
 .clearfix:after {
     content: '';
     display: block;
     visibility: hidden;
     clear: both;
 }
+
 .clearfix {
-    zoom: 1; /* for IE6/7 */
+    zoom: 1;
+    /* for IE6/7 */
 }
 
 
-
-
-
-
-
-
 /********************************************************/
+
+
 /*                        fonts                         */
+
+
 /********************************************************/
+
 @font-face {
-font-family: 'Koruri Regular';
-src: url('../fonts/kokuri-font/Koruri-Regular-sub.eot');
-src: url('../fonts/kokuri-font/Koruri-Regular-sub.eot?#iefix') format('embedded-opentype'),
-url('../fonts/kokuri-font/Koruri-Regular-sub.woff') format('woff'),
-url('../fonts/kokuri-font/Koruri-Regular-sub.ttf') format('truetype');
+    font-family: 'Koruri Regular';
+    src: url('../fonts/kokuri-font/Koruri-Regular-sub.eot');
+    src: url('../fonts/kokuri-font/Koruri-Regular-sub.eot?#iefix') format('embedded-opentype'), url('../fonts/kokuri-font/Koruri-Regular-sub.woff') format('woff'), url('../fonts/kokuri-font/Koruri-Regular-sub.ttf') format('truetype');
 }
-
-
-
-
 
 
 /********************************************************/
@@ -83,15 +69,11 @@ url('../fonts/kokuri-font/Koruri-Regular-sub.ttf') format('truetype');
 html {
     background: #FFFFFF url(../images/woodBoard.jpg) repeat center center fixed;
     /*background: #F00 center fixed no-repeat, #0F0 center fixed;*/
-
     /*background-color: rgba(102,186,183,1);*/
     /*background-color: #81C7D4;*/
-
-    
     overflow-y: scroll;
     /* 表示切れない部分はスクロールによって閲覧できる。 Add By.Sugar 2015.06.14 */
 }
-
 
 body {
     background: transparent;
@@ -103,9 +85,8 @@ body {
     color: #fff;
     color: rgba(0, 0, 0, .8);
     font-weight: normal;
-    display:block;
+    display: block;
 }
-
 
 
 /********************************************************/
@@ -216,10 +197,10 @@ body {
     overflow: auto;
     height: 100%;
     padding: 0px 0 30px 30px;
-    display: block; /* noneにする事で、setionのデフォルトを非表示にすることができる。 */
+    display: block;
+    /* noneにする事で、setionのデフォルトを非表示にすることができる。 */
     top: 0;
 }
-
 
 
 /********************************************************/
@@ -241,29 +222,20 @@ a:active {
     text-decoration: underline;
 }
 
-.title{
-
+.title {
     font-family: 'Wire One', Helvetica, Arial, sans-serif;
     font-weight: normal;
     font-size: 90px;
     margin-bottom: 10px;
-
     color: #81C7D4;
-    text-shadow:
-        0px  1px 0 #5F5F5D,
-        -1px -1px 0 #5F5F5D,
-        1px -1px 0 #5F5F5D,
-        1px  1px 0 #5F5F5D,
-        -1px  0px 0 #5F5F5D;
-    -webkit-mask-image:-webkit-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,1));
-    mask-image: linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,1));
-    
+    text-shadow: 0px 1px 0 #5F5F5D, -1px -1px 0 #5F5F5D, 1px -1px 0 #5F5F5D, 1px 1px 0 #5F5F5D, -1px 0px 0 #5F5F5D;
+    /* bottomからtopへ向けて少しフェードするエフェクト
+    -webkit-mask-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1));
+    mask-image: linear-gradient(top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1));
+    */
 }
 
-
-.main-theme .title{
-}
-
+.main-theme .title {}
 
 .subtitle {
     font-family: 'Wire One', Helvetica, Arial, sans-serif;
@@ -271,8 +243,8 @@ a:active {
     font-size: 90px;
     margin-bottom: 10px;
     color: #FDF9F4;
-    -webkit-mask-image: -webkit-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,1));
-    mask-image: linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,1));
+    -webkit-mask-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1));
+    mask-image: linear-gradient(top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1));
 }
 
 .subtitle {
