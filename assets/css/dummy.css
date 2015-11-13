@@ -8,6 +8,185 @@
 
 
 
+.post-item {
+    text-align: center;
+    font-family: Koruri Regular,Georgia, serif;
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    background: rgba(219, 219, 219, 0.45);
+    position: relative;
+
+    width: 450px;
+    height: 278px;
+}
+
+.box-effect {
+    /* 描画範囲は三角(折りたたんでいる部分)の対角線長にするので、41px/1.4114=29pxとなる。 */
+    /* 最前列のレイヤー : 折りたたみ部分以外の色付けのレイヤー、右上から左下までを開始位置から29px先を始点として色付け。 */
+    /* ２枚目のレイヤー : 41pxにすると少しずれるので、右上から(40px)×(40px)の範囲を対象とする。
+    対象の正方形領域の中心点から 色付け。 */
+    /*  linear-gradient(グラデの方向   , 開始の色     位置, 終了の色       位置) x座標 y座標 繰り返しなし */
+    background: linear-gradient(-135deg, transparent 30px, rgba(219, 219, 219, 0.35) 0) 100% 0 no-repeat, linear-gradient(-135deg, transparent 50%, rgba(219, 219, 219, 0.35) 0) 100% 0% no-repeat !important;
+    background-size: auto, 40px 40px !important;
+    background-repeat: no-repeat !important;
+}
+
+
+
+
+.dotline-block {
+    color: #000;
+    background: #33b591;
+    padding: 20px;
+    border: 2px dashed rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    box-shadow: 0 0 0 5px #3cb371;
+    -moz-box-shadow: 0 0 0 5px #3cb371, 0 2px 3px 5px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 0 5px #3cb371, 0 2px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/********************************************************
+*********************************************************
+********************** .windmill  ***********************
+*********************************************************
+********************************************************/
+
+.windmill {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin: 100px auto;
+}
+
+.wind {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    animation: rotates 40s infinite linear;
+    -moz-animation: rotates 40s infinite linear;
+    -webkit-animation: rotates 40s infinite linear;
+    -o-animation: rotates 40s infinite linear;
+}
+
+.wind:after {
+    content: "";
+    position: absolute;
+    top: 45px;
+    left: 45px;
+    width: 10px;
+    height: 10px;
+    background: #eee;
+    border-radius: 50%;
+}
+
+.wind1,
+.wind2,
+.wind3,
+.wind4 {
+    width: 90px;
+    height: 40px;
+    position: absolute;
+    margin: 13px 0 0 -41px;
+    background: #cef;
+    border-bottom-left-radius: 40% 100%;
+}
+
+.wind1 {
+    transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    background: #f39c12;
+}
+
+.wind1:after {
+    background-image: radial-gradient(circle at 0px 0px, rgba(241, 196, 15, 0) 40px, #f1c40f 41px);
+}
+
+.wind2 {
+    left: 63px;
+    top: -28px;
+    transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    background: #e74c3c;
+}
+
+.wind2:after {
+    background-image: radial-gradient(circle at 0px 0px, rgba(255, 4, 4, 0) 40px, #d33 41px);
+}
+
+.wind3 {
+    left: 92px;
+    top: 35px;
+    transform: rotate(225deg);
+    -moz-transform: rotate(225deg);
+    -webkit-transform: rotate(225deg);
+    -o-transform: rotate(225deg);
+    background: #27ae60;
+}
+
+.wind3:after {
+    background-image: radial-gradient(circle at 0px 0px, rgba(241, 196, 15, 0) 40px, #2ecc71 41px);
+}
+
+.wind4 {
+    left: 29px;
+    top: 63px;
+    transform: rotate(315deg);
+    -moz-transform: rotate(315deg);
+    -webkit-transform: rotate(315deg);
+    -o-transform: rotate(315deg);
+    background: #2980b9;
+}
+
+.wind4:after {
+    background-image: radial-gradient(circle at 0px 0px, rgba(52, 152, 219, 0) 40px, #3498db 41px);
+}
+
+@keyframes rotates {
+    form {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@-moz-keyframes rotates {
+    form {
+        -moz-transform: rotate(0deg);
+    }
+    to {
+        -moz-transform: rotate(-360deg);
+    }
+}
+
+@-webkit-keyframes rotates {
+    form {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(-360deg);
+    }
+}
+
+@-o-keyframes rotates {
+    form {
+        -o-transform: rotate(0deg);
+    }
+    to {
+        -o-transform: rotate(-360deg);
+    }
+}
+
+
 
 
 

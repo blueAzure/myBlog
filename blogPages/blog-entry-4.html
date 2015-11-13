@@ -9,14 +9,14 @@
 
         <title>testBlogPage</title>
 
-        <link rel="shortcut icon" href="../assets/images/icon.ico">
+        <link rel="shortcut icon" href="/assets/images/icon.ico">
 
         <!-- Bootstrap itself -->
         <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
         <!-- Styles Sheet (CSS) -->
-        <link rel="stylesheet" type="text/css" href="../assets/css/styles.css">
-        <link rel="stylesheet" type="text/css" href="../assets/css/blog.css">
+        <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+        <link rel="stylesheet" type="text/css" href="/assets/css/blog.css">
 
         <!-- icon -->
         <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -26,10 +26,17 @@
 
         <!-- Google Analitics -->
         <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-                                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
             ga('create', 'UA-64281368-1', 'auto');
             ga('send', 'pageview');
         </script>
@@ -38,53 +45,26 @@
 
     <body class="main-theme text-shadows">
 
-        <!-- Menu Bar -->
-        <nav class="mainmenu">
+        <!-- header -->
+        <div id="header"></div>
+
+        <section class="section" id="blogPost">
             <div class="container">
-                <div class="dropdown">
-                    <button type="button" class="navbar-toggle" data-toggle="dropdown">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
 
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                        <li><a href="../index.html" class="active">Home</a></li>
-                        <li><a href="../blog.html">Blog</a></li>
-                        <li><a href="../gallary.html">Gallary</a></li>
-                        <li><a href="../about.html">About me</a></li>
-                        <li><a href="../dummy.html">Dummy</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+                <article id="post">
+                    <!-- 記事タイトル -->
+                    <div id="post-title">参考資料リスト</div>
 
+                    <hr style="border-top: 2px dashed">
 
-
-        <!-- 1st section -->
-        <section class="section" id="blog">
-            <div class="container">
-                <h1 class="title">Blog</h1>
-                <h2 class="subtitle">-subtitle-</h2>
-                <hr>
-
-                <!-- 記事 -->
-                <article class="post">
-                    <div class="post-title">参考資料リスト</div>
-
-                    <div class="post-date">01/11/2015</div>
-
-                    <div class="post-tag">developmentBlog</div>
-
-                    <div class="post-id">1</div>
-
-                    <div class="post-overview">
+                    <!-- 記事概要 -->
+                    <div id="post-overview">
                         このブログの拡張にあたって、参考となりそうな資料をメモしておきます。
                     </div>
 
-                    <div class="post-content">
+
+                    <!-- 記事本文 -->
+                    <div id="post-content">
                         <h2>
                             参考資料リスト
                         </h2>
@@ -103,50 +83,142 @@
                                 <br>[http://colourco.de/]</li>
 
                             <li>
+                                webページの読み込み速度を解析してくれるサービス。
+                                [https://gtmetrix.com/]
                             </li>
                         </ul>
                         </p>
                     </div>
+                <!-- 記事本文ここまで -->
+
+
+
+                <hr style="border-top: 2px dashed">
+
+                <!-- postInfo -->
+                <ul class="post-info-list clearfix">
+
+                    <li>
+                        <i class="fa fa-clock-o"></i> 投稿日:
+                        <time datetime="4/11/2015" id="post-date">2015-11-01</time>
+                    </li>
+
+                    <li>
+                        <i class="fa fa-tag"></i> tag:
+                        <span id="post-tag">developmentBlog</span>
+                    </li>
+
+                    <li id="post-id">
+                        <i class="fa fa-cube"></i> 4
+                    </li>
+                </ul>
+
+
+                <ul class="post-info-list clearfix">
+
+                    <li>
+                        <!-- pocket get button -->
+                        <a data-pocket-label="pocket" data-pocket-count="horizontal" data-pocket-align="left" class="pocket-btn"></a>
+                    </li>
+
+                    <li>
+                        <!-- twitter share button -->
+                        <a class="twitter-share-button" href="https://twitter.com/share" data-dnt="true"></a>
+                    </li>
+
+                    <li>
+                        <!-- facebook share button -->
+                        <div class="fb-like" data-href="#" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+                    </li>
+
+                    <li>
+                        <!-- googlePlus share button -->
+                        <div class="g-plus" data-action="share" data-annotation="bubble" data-href="#"></div>
+                    </li>
+                </ul>
+
+
                 </article>
 
+            </div>
+
+        <!-- footer -->
+        <div id="footer"></div>
+
+        <div id="page-top">
+            <a href=".post-title">
+                <i class="fa fa-angle-double-up fa-2x"></i>
+            </a>
         </div>
-    </article>
 
-</div>
-</section>
 
+        </section>
 
 
 
 
 
-<!-- Load javascript libraries -->
-<!-- JavaScriptのPluginは頻繁に仕様が変わるため、versionの変更の際には注意すること。 -->
 
-<!-- jQuery -->
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Load javascript libraries -->
+    <!-- JavaScriptのPluginは頻繁に仕様が変わるため、versionの変更の際には注意すること。 -->
 
-<!-- bootstrap -->
-<script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-<!-- FancyBox -->
-<script type="text/javascript" src="../assets/js/jquery.fancybox.js"></script>
-<script type="text/javascript">
-    $(document).ready(function () { // fancybox Default
-        $('.fancybox').fancybox();
-    });
-    jQuery("a.iframe").fancybox({ // fancybox iFrame
-        'width': '80%',
-        'height': '80%',
-        'autoScale': false,
-        'transitionIn': 'none',
-        'transitionOut': 'none',
-        'type': 'iframe',
-        'loop': false
-    });
-</script>
+    <!-- bootstrap -->
+    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+    <!-- load header from header.html -->
+    <script type="text/javascript" src="/assets/js/load-header.js"></script>
+
+    <!-- load header from footer.html -->
+    <script type="text/javascript" src="/assets/js/load-footer.js"></script>
+
+    <!-- load sns share button -->
+    <script type="text/javascript" src="/assets/js/share-button.js"></script>
+    <div id="fb-root"></div>
+
+    <script type="text/javascript">
+        $(function () {
+            var topBtn = $('#page-top');
+            topBtn.hide();
+            //スクロールが100に達したらボタン表示
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    topBtn.fadeIn();
+                } else {
+                    topBtn.fadeOut();
+                }
+            });
+            //スクロールしてトップ
+            topBtn.click(function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 500);
+                return false;
+            });
+        });
+    </script>
 
 
-</body>
+    <!-- FancyBox -->
+    <script type="text/javascript" src="/assets/js/jquery.fancybox.js "></script>
+    <script type="text/javascript">
+        $(document).ready(function () { // fancybox Default
+            $('.fancybox').fancybox();
+        });
+        jQuery("a.iframe ").fancybox({ // fancybox iFrame
+            'width': '80%',
+            'height': '80%',
+            'autoScale': false,
+            'transitionIn': 'none',
+            'transitionOut': 'none',
+            'type': 'iframe',
+            'loop': false
+        });
+    </script>
+
+
+    </body>
 
 </html>

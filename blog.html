@@ -20,7 +20,7 @@
 
     <!-- icon -->
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    
+
     <!-- Title Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
 
@@ -44,40 +44,14 @@
 
 
 
-
 <body class="main-theme text-shadows">
 
-    <!-- Menu Bar -->
-    <nav class="mainmenu">
-        <div class="container">
-            <div class="dropdown">
-                <button type="button" class="navbar-toggle" data-toggle="dropdown">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+    <!-- header -->
+    <div id="header"></div>
 
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="gallary.html">Gallary</a></li>
-                    <li><a href="about.html">About me</a></li>
-                    <li><a href="dummy.html">Dummy</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-
-    
     <!-- 1st section -->
     <section class="section" id="blog">
         <div class="container">
-            <h1 class="title">Blog</h1>
-            <h2 class="subtitle">-subtitle-</h2>
-            <hr>
 
             <h3 class="tagline">記事一覧</h3>
 
@@ -90,7 +64,7 @@
                 </li>
                 <li>
                     <a href="#" data-filter=".developmentBlog">
-                        Dev. Blog
+                        Develop Blog
                     </a>
                 </li>
                 <li>
@@ -126,27 +100,27 @@
 
             <!-- isotope table -->
             <div class="isotope-article-table">
+                <a href="./blogPages/blog-entry-0.html" class="post-item"></a>
 
-                <a href="./blogPages/testBlogPage.html" class="post-item" style="border: solid 1px; border-color: black;">
-                </a>
+                <a href="./blogPages/blog-entry-1.html" class="post-item"></a>
 
-                <a href="./blogPages/blog-entry-1.html" class="post-item box-effect shadow-effect">
-                </a>
+                <a href="./blogPages/blog-entry-2.html" class="post-item"></a>
 
-                <a href="./blogPages/blog-entry-2.html" class="post-item box-effect shadow-effect">
-                </a>
+                <a href="./blogPages/blog-entry-3.html" class="post-item"></a>
 
-                <a href="./blogPages/blog-entry-3.html" class="post-item box-effect shadow-effect">
-                </a>
-                
-                <a href="./blogPages/blog-entry-4.html" class="post-item box-effect shadow-effect">
-                </a>
+                <a href="./blogPages/blog-entry-4.html" class="post-item"></a>
+
+                <a href="./blogPages/blog-entry-5.html" class="post-item"></a>
+
+                <a href="./blogPages/blog-entry-6.html" class="post-item"></a>
             </div>
-
-
 
         </div>
     </section>
+
+
+
+
 
 
     <!-- Load javascript libraries -->
@@ -158,19 +132,25 @@
     <!-- bootstrap -->
     <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 
+    <!-- load header from header.html -->
+    <script type="text/javascript" src="/assets/js/load-header.js"></script>
+
     <!-- isotope -->
     <script type="text/javascript" src="assets/js/isotope.pkgd.min.js"></script>
     <script type="text/javascript">
         $(function () {
-            $('.isotope-article-table').isotope({
-                itemSelector: '.post-item',
-                getSortData: {
-                    postID: ".post-ID parseInt",
-                    lastUpdatedDate: ".post-lastDate"
-                },
-                masonry: {
-                    columnWidth: 10
-                }
+
+            $(window).load(function () {
+                $('.isotope-article-table').isotope({
+                    itemSelector: '.post-item',
+                    getSortData: {
+                        postID: ".post-ID parseInt",
+                        lastUpdatedDate: ".post-lastDate"
+                    },
+                    masonry: {
+                        columnWidth: 10
+                    }
+                });
             });
         });
     </script>
@@ -212,34 +192,6 @@
 
     <!-- 外部のhtmlからデータを取得するスクリプト -->
     <!-- 各ポストのhtmlから記事のタイトル、ID、閲覧数(現在未完成)、投稿日、最終更新日を取得し、記事に追加する。 -->
-    <!--
-    <script type="text/javascript">
-        $(function () {
-            var postItemArray = document.getElementsByClassName("post-item");
-            var itemNum = postItemArray.length;
-
-            for (i = 0; i < itemNum; i++) {
-                (function (j) {
-                    $.ajax({
-                        type: 'GET',
-                        dataType: 'html',
-                        url: postItemArray.item(j),
-                        success: function (data) {
-                            //var postTitle = $(data).find('.post-title').text();
-                            var postTitle = $(data).find('.post-title').text();
-                            if (postTitle == null) {
-                                postTitle = "Error :: can't get Title!"
-                            }                          
-                            var postItemArray = document.getElementsByClassName("post-item");
-                            postItemArray.item(j).innerHTML += postTitle + "<br>";
-                            //window.alert("getTitle:" + postTitle + "\n" + "in:" + postItemArray.item(j));
-                        }
-                    });
-                })(i)
-            }
-        });
-    </script>
-    -->
 
     <script type="text/javascript">
         $(function () {
@@ -252,34 +204,130 @@
                     dataType: 'html',
                     url: postItemArray.item(j),
                     success: function (data) {
-                        var postTitle = $(data).find('.post-title').text();
-                        var postID = $(data).find('.post-id').text();
-                        var postDate = $(data).find('.post-date').text();
-                        var postLastDate = $(data).find('.post-lastDate').text();
-                        var postViews = $(data).find('.post-views').text();
-                        var postOverview = $(data).find('.post-overview').text();
-                        var postTag = $(data).find('.post-tag').text();
-                        if (postLastDate == null) {
-                            postLastDate = postDate;
-                        }
+                        var postTitle = $(data).find('#post-title').text();
+                        var postDate = $(data).find('#post-date').text();
+                        var postLastDate = $(data).find('#post-lastDate').text();
+                        var postTag = $(data).find('#post-tag').text();
+                        var postOverview = $(data).find('#post-overview').text();
+                        var postID = $(data).find('#post-id').text();
+                        //var postViews = $(data).find('#post-views').text();
 
                         var postItemArray = document.getElementsByClassName("post-item");
-                        postItemArray.item(j).innerHTML += '<div class=\"post-title\"">' + postTitle + "</div>";
-                        postItemArray.item(j).innerHTML += '<div class=\"post-date\"">' + postDate + "</div>";
-                        postItemArray.item(j).innerHTML += '<div class=\"post-lastDate\"">' + postLastDate + "</div>";
-                        postItemArray.item(j).innerHTML += '<span class=\"post-views\"">' + postViews + "</span>";
-                        postItemArray.item(j).innerHTML += '<div class=\"post-overview\"">' + postOverview + "</div>";
-                        postItemArray.item(j).innerHTML += '<span class=\"post-id\"">' + postID + "</span>";
-                        postItemArray.item(j).className += " " + postTag;
 
-                        // 確認用
-                        //window.alert("getTitle:" + postTitle + "\n" + "in:" + postItemArray.item(j));
-                        //window.alert("getID:" + postID);
-                        //window.alert("getDate:" + postDate);
-                        //window.alert("getLastDate:" + postLastDate);
-                        //window.alert("getViews:" + postViews);
-                        //window.alert("getOverview:" + postOverview);
-                        //window.alert("getTag:" + postTag);
+                        // post image
+                        var postImgDiv = document.createElement("img");
+                        postImgDiv.className = "clearfix";
+                        if (postTag == "developmentBlog") {
+                            postImgDiv.setAttribute("src", "/assets/images/blueGear.png");
+                        } else if (postTag == "others") {
+                            postImgDiv.setAttribute("src", "https://placehold.jp/3d4070/ffffff/80x80.png?text=Others");
+                        } else { // No Image
+                            postImgDiv.setAttribute("src", "https://placehold.jp/3d4070/ffffff/80x80.png?text=No%20Image");
+                        }
+                        postItemArray.item(j).appendChild(postImgDiv);
+
+
+
+                        // post-title
+                        var postTitleDiv = document.createElement("div");
+                        postTitleDiv.className = "post-title";
+                        postTitleDiv.innerHTML = postTitle;
+                        postItemArray.item(j).appendChild(postTitleDiv);
+
+                        // post-info-list(ul: post-date, post-lastDate)
+                        var postInfoUl = document.createElement("ul");
+                        postInfoUl.className = "post-info-list clearfix";
+
+                        // post-date
+                        {
+                            var postDateTime = document.createElement("time");
+                            postDateTime.className = "post-date";
+                            postDateTime.innerHTML = postDate;
+
+                            var postIconTag = document.createElement("i");
+                            postIconTag.className = "fa fa-clock-o";
+
+                            var textNode = document.createTextNode(" 投稿日: ");
+
+                            var postList = document.createElement("li");
+
+                            postList.appendChild(postIconTag);
+                            postList.appendChild(textNode);
+                            postList.appendChild(postDateTime);
+
+                            postInfoUl.appendChild(postList);
+                        }
+
+                        // post-lastDate
+                        {
+                            var postLastDateTime = document.createElement("time");
+                            postLastDateTime.className = "post-lastDate";
+                            postLastDateTime.innerHTML = postDate;
+
+                            var postIconTag = document.createElement("i");
+                            postIconTag.className = "fa fa-clock-o";
+
+                            var textNode = document.createTextNode(" 最終更新日: ");
+
+                            var postList = document.createElement("li");
+
+                            postList.appendChild(postIconTag);
+                            postList.appendChild(textNode);
+                            postList.appendChild(postLastDateTime);
+
+                            postInfoUl.appendChild(postList);
+                        }
+
+                        postItemArray.item(j).appendChild(postInfoUl);
+
+                        // post-info-list(ul: post-tag)
+                        var postInfoUl2 = document.createElement("ul");
+                        postInfoUl2.className = "post-info-list clearfix";
+
+                        // post-tag
+                        {
+
+                            var postTagSpan = document.createElement("span");
+                            postTagSpan.className = "post-tag";
+                            postTagSpan.innerHTML = postTag;
+
+                            var postIconTag = document.createElement("i");
+                            postIconTag.className = "fa fa-tag";
+
+                            var textNode = document.createTextNode(" tag: ");
+
+                            var postList = document.createElement("li");
+
+                            postList.appendChild(postIconTag);
+                            postList.appendChild(textNode);
+                            postList.appendChild(postTagSpan);
+
+                            postInfoUl2.appendChild(postList);
+                        }
+                        postItemArray.item(j).appendChild(postInfoUl2);
+
+                        // post-overview
+                        var postOverviewDiv = document.createElement("div");
+                        postOverviewDiv.className = "post-overview";
+                        postOverviewDiv.innerHTML = postOverview;
+                        postItemArray.item(j).appendChild(postOverviewDiv);
+
+                        // post-more
+                        var postMore = document.createElement("div");
+                        postMore.className = "post-more";
+                        postMore.innerHTML = "read more...";
+                        postItemArray.item(j).appendChild(postMore);
+
+                        // post-id
+                        var postIDDiv = document.createElement("div");
+                        postIDDiv.className = "post-id";
+                        postIDDiv.innerHTML = postID;
+                        postItemArray.item(j).appendChild(postIDDiv);
+
+                        // add post tag for sort&filter
+                        postItemArray.item(j).className += " " + postTag;
+                        $(postItemArray.item(j)).find(".post-tag").text(postTag);
+
                     }
                 });
             }
