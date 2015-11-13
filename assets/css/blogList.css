@@ -36,20 +36,27 @@ BLOG created By.Suga
 
 
 
-.more {
+.post-more {
     float: right;
+    display: block;
 }
+
+.post-more:hover{
+    
+}
+
 
 .post-item {
     margin: 10px;
     padding: 10px;
-    border: 2px solid #666;
+    border: 2px solid #81C7D4;;
     background-color: rgba(219, 219, 219, 0.35);
     text-align: left;
     font-family: Koruri Regular, Georgia, serif;
     font-size: 20px;
     width: 450px;
     height: 278px;
+    box-shadow: 0 2px 3px 5px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 0 2px 3px 5px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: 0 2px 3px 5px rgba(0, 0, 0, 0.5);
     position: relative;
@@ -60,9 +67,16 @@ BLOG created By.Suga
     width: 80px;
     height: 80px;
     float: left;
+    /*border: 1px solid black;*/
 }
 
-.post-item:hover {}
+.post-item:hover {
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    background-color: rgba(219, 219, 219, 0.85);
+    text-decoration: none;
+    
+}
 
 ul.isotope-filter,
 ul.isotope-sort {
@@ -128,13 +142,13 @@ ul.isotope-sort li a {
 .post-overview {
     font-size: 16px;
     margin: 5px;
-    padding: 5px 5px 10px 5px;
+    padding: 5px 5px 5px 5px;
     text-align: left;
     border: solid #000;
     border-width: 1px;
     width: 410px;
     /* とりあえず打ち込んだ適当な値。 */
-    height: 130px;
+    height: 140px;
     /* とりあえず打ち込んだ適当な値。 */
     overflow: hidden;
 }
