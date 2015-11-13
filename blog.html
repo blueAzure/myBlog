@@ -100,37 +100,19 @@
 
             <!-- isotope table -->
             <div class="isotope-article-table">
+                <a href="./blogPages/testBlogPage.html" class="post-item"></a>
 
-                <!--
-                <a href="./blogPages/testBlogPage.html" class="post-item">
-                    <img class="clearfix">
-                </a>
+                <a href="./blogPages/blog-entry-1.html" class="post-item"></a>
 
-                <a href="./blogPages/blog-entry-1.html" class="post-item">
-                    <img class="clearfix">
-                </a>
+                <a href="./blogPages/blog-entry-2.html" class="post-item"></a>
 
-                <a href="./blogPages/blog-entry-2.html" class="post-item">
-                    <img class="clearfix">
-                </a>
+                <a href="./blogPages/blog-entry-3.html" class="post-item"></a>
 
-                <a href="./blogPages/blog-entry-3.html" class="post-item">
-                    <img class="clearfix">
-                </a>
+                <a href="./blogPages/blog-entry-4.html" class="post-item"></a>
 
-                <a href="./blogPages/blog-entry-4.html" class="post-item">
-                    <img class="clearfix">
-                </a>
+                <a href="./blogPages/blog-entry-5.html" class="post-item"></a>
 
-                <a href="./blogPages/blog-entry-5.html" class="post-item">
-                    <img class="clearfix">
-                </a>
-                -->
-
-                <a href="./blogPages/blog-entry-6.html" class="post-item">
-                </a>
-
-
+                <a href="./blogPages/blog-entry-6.html" class="post-item"></a>
             </div>
 
         </div>
@@ -255,27 +237,27 @@
                         // post-info-list(ul: post-date, post-lastDate)
                         var postInfoUl = document.createElement("ul");
                         postInfoUl.className = "post-info-list clearfix";
-                        
+
                         // post-date
                         {
                             var postDateTime = document.createElement("time");
                             postDateTime.className = "post-date";
                             postDateTime.innerHTML = postDate;
-                            
+
                             var postIconTag = document.createElement("i");
                             postIconTag.className = "fa fa-clock-o";
-                            
+
                             var textNode = document.createTextNode(" 投稿日: ");
-                            
+
                             var postList = document.createElement("li");
-                            
+
                             postList.appendChild(postIconTag);
                             postList.appendChild(textNode);
                             postList.appendChild(postDateTime);
-                            
+
                             postInfoUl.appendChild(postList);
                         }
-                        
+
                         // post-lastDate
                         {
                             var postLastDateTime = document.createElement("time");
@@ -301,7 +283,7 @@
                         // post-info-list(ul: post-tag)
                         var postInfoUl2 = document.createElement("ul");
                         postInfoUl2.className = "post-info-list clearfix";
-                        
+
                         // post-tag
                         {
 
@@ -323,7 +305,7 @@
                             postInfoUl2.appendChild(postList);
                         }
                         postItemArray.item(j).appendChild(postInfoUl2);
-                        
+
                         // post-overview
                         var postOverviewDiv = document.createElement("div");
                         postOverviewDiv.className = "post-overview";
@@ -335,7 +317,7 @@
                         postMore.className = "post-more";
                         postMore.innerHTML = "read more...";
                         postItemArray.item(j).appendChild(postMore);
-                        
+
                         // post-id
                         var postIDDiv = document.createElement("div");
                         postIDDiv.className = "post-id";
