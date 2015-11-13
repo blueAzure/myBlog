@@ -126,52 +126,10 @@
                     <img class="clearfix">
                 </a>
                 -->
-                
-                <a href="./blogPages/blog-entry-6.html" class="post-item">  
-                    <img class="clearfix">
-                    <div class="post-title"></div>
-                    <ul class="post-info-list clearfix">
-                        <li>
-                            <i class="fa fa-clock-o"></i> 最終更新日: <time class="post-date"></time>
-                        </li>
-                        <li>
-                            <i class="fa fa-clock-o"></i> 投稿日: <time class="post-lastDate"></time>
-                        </li>
-                    </ul>
-                    <ul class="post-info-list clearfix">
-                        <li>
-                            <i class="fa fa-tag"></i> tag:
-                            <span class="post-tag"></span>
-                        </li>
-                    </ul>
-                    <div class="post-overview"></div>
-                    <div class="post-more">read more...</div>
-                    <div class="post-id"></div>
+
+                <a href="./blogPages/blog-entry-6.html" class="post-item">
                 </a>
-                
-                <!--
-                <a class="post-item">
-                    <img class="clearfix">
-                    <div class="post-title"></div>
-                    <ul class="post-info-list clearfix">
-                        <li>
-                            <i class="fa fa-clock-o"></i> 最終更新日: <time class="post-date"></time>
-                        </li>
-                        <li>
-                            <i class="fa fa-clock-o"></i> 投稿日: <time class="post-lastDate"></time>
-                        </li>
-                    </ul>
-                    <ul class="post-info-list clearfix">
-                        <li>
-                            <i class="fa fa-tag"></i> tag:
-                            <span class="post-tag"></span>
-                        </li>
-                    </ul>
-                    <div class="post-overview"></div>
-                    <div class="post-more">read more...</div>
-                    <div class="post-id"></div>
-                </a>
-                -->
+
 
             </div>
 
@@ -265,51 +223,129 @@
                     url: postItemArray.item(j),
                     success: function (data) {
                         var postTitle = $(data).find('#post-title').text();
-                        var postID = $(data).find('#post-id').text();
                         var postDate = $(data).find('#post-date').text();
                         var postLastDate = $(data).find('#post-lastDate').text();
-                        var postViews = $(data).find('#post-views').text();
-                        var postOverview = $(data).find('#post-overview').text();
                         var postTag = $(data).find('#post-tag').text();
+                        var postOverview = $(data).find('#post-overview').text();
+                        var postID = $(data).find('#post-id').text();
+                        //var postViews = $(data).find('#post-views').text();
 
                         var postItemArray = document.getElementsByClassName("post-item");
 
+                        // post image
+                        var postImgDiv = document.createElement("img");
+                        postImgDiv.className = "clearfix";
+                        if (postTag == "developmentBlog") {
+                            postImgDiv.setAttribute("src", "/assets/images/blueGear.png");
+                        } else if (postTag == "other") {
+                            postImgDiv.setAttribute("src", "https://placehold.jp/3d4070/ffffff/80x80.png?text=Other");
+                        } else { // No Image
+                            postImgDiv.setAttribute("src", "https://placehold.jp/3d4070/ffffff/80x80.png?text=No%20Image");
+                        }
+                        postItemArray.item(j).appendChild(postImgDiv);
+
+
+
                         // post-title
-                        $(postItemArray.item(j)).find(".post-title").text(postTitle);
+                        var postTitleDiv = document.createElement("div");
+                        postTitleDiv.className = "post-title";
+                        postTitleDiv.innerHTML = postTitle;
+                        postItemArray.item(j).appendChild(postTitleDiv);
+
+                        // post-info-list(ul: post-date, post-lastDate)
+                        var postInfoUl = document.createElement("ul");
+                        postInfoUl.className = "post-info-list clearfix";
                         
                         // post-date
-                        $(postItemArray.item(j)).find(".post-date").text(postDate);
-                                                
+                        {
+                            var postDateTime = document.createElement("time");
+                            postDateTime.className = "post-date";
+                            postDateTime.innerHTML = postDate;
+                            
+                            var postIconTag = document.createElement("i");
+                            postIconTag.className = "fa fa-clock-o";
+                            
+                            var textNode = document.createTextNode(" 投稿日: ");
+                            
+                            var postList = document.createElement("li");
+                            
+                            postList.appendChild(postIconTag);
+                            postList.appendChild(textNode);
+                            postList.appendChild(postDateTime);
+                            
+                            postInfoUl.appendChild(postList);
+                        }
+                        
                         // post-lastDate
-                        if (postLastDate != null) {
-                            $(postItemArray.item(j)).find(".post-lastDate").text(postLastDate);
+                        {
+                            var postLastDateTime = document.createElement("time");
+                            postLastDateTime.className = "post-lastDate";
+                            postLastDateTime.innerHTML = postDate;
+
+                            var postIconTag = document.createElement("i");
+                            postIconTag.className = "fa fa-clock-o";
+
+                            var textNode = document.createTextNode(" 最終更新日: ");
+
+                            var postList = document.createElement("li");
+
+                            postList.appendChild(postIconTag);
+                            postList.appendChild(textNode);
+                            postList.appendChild(postLastDateTime);
+
+                            postInfoUl.appendChild(postList);
                         }
-                        else{
-                            $(postItemArray.item(j)).find(".post-lastDate").css("display", "none");
-                        }
-                        
-                        // post-overview
-                        $(postItemArray.item(j)).find(".post-overview").text(postOverview);
-                        
-                        // post-id
-                        $(postItemArray.item(j)).find(".post-id").text(postID);
+
+                        postItemArray.item(j).appendChild(postInfoUl);
+
+                        // post-info-list(ul: post-tag)
+                        var postInfoUl2 = document.createElement("ul");
+                        postInfoUl2.className = "post-info-list clearfix";
                         
                         // post-tag
+                        {
+
+                            var postTagSpan = document.createElement("span");
+                            postTagSpan.className = "post-tag";
+                            postTagSpan.innerHTML = postTag;
+
+                            var postIconTag = document.createElement("i");
+                            postIconTag.className = "fa fa-tag";
+
+                            var textNode = document.createTextNode(" tag: ");
+
+                            var postList = document.createElement("li");
+
+                            postList.appendChild(postIconTag);
+                            postList.appendChild(textNode);
+                            postList.appendChild(postTagSpan);
+
+                            postInfoUl2.appendChild(postList);
+                        }
+                        postItemArray.item(j).appendChild(postInfoUl2);
+                        
+                        // post-overview
+                        var postOverviewDiv = document.createElement("div");
+                        postOverviewDiv.className = "post-overview";
+                        postOverviewDiv.innerHTML = postOverview;
+                        postItemArray.item(j).appendChild(postOverviewDiv);
+
+                        // post-more
+                        var postMore = document.createElement("div");
+                        postMore.className = "post-more";
+                        postMore.innerHTML = "read more...";
+                        postItemArray.item(j).appendChild(postMore);
+                        
+                        // post-id
+                        var postIDDiv = document.createElement("div");
+                        postIDDiv.className = "post-id";
+                        postIDDiv.innerHTML = postID;
+                        postItemArray.item(j).appendChild(postIDDiv);
+
+                        // add post tag for sort&filter
                         postItemArray.item(j).className += " " + postTag;
                         $(postItemArray.item(j)).find(".post-tag").text(postTag);
 
-                        // イメージ画像の追加
-                        var imageTag = $(postItemArray.item(j)).find("img");
-                        if(postTag == "developmentBlog"){ 
-                            imageTag.attr("src", "/assets/images/blueGear.png");
-                        }
-                        else if(postTag == "other"){
-                            imageTag.attr("src", "https://placehold.jp/3d4070/ffffff/80x80.png?text=Other");
-                        }
-                        else{ // No Image
-                            imageTag.attr("src", "https://placehold.jp/3d4070/ffffff/80x80.png?text=No%20Image");
-                        }
-                        
                     }
                 });
             }
