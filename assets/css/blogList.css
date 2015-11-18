@@ -49,16 +49,15 @@ BLOG created By.Suga
 .post-item {
     margin: 10px;
     padding: 10px;
-    border: 2px solid #81C7D4;;
     background-color: rgba(219, 219, 219, 0.35);
     text-align: left;
     font-family: Koruri Regular, Georgia, serif;
     font-size: 20px;
     width: 450px;
     height: 278px;
-    box-shadow: 0 2px 3px 5px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 0 2px 3px 5px rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: 0 2px 3px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.5);
     position: relative;
 }
 
