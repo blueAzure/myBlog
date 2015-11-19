@@ -32,8 +32,8 @@
     display: block;
     margin: 0;
     padding: 15px 0 11px;
-    background: #8a9b0f;
-    color: #fff;
+    background: rgba(255, 255, 255, 0.5);
+    color: black;
     font-size: 14px;
     line-height: 1;
     text-decoration: none;

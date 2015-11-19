@@ -58,14 +58,18 @@
 
             
 
+
+            
+
             <ul id="fade-in2" class="dropmenu">
                 <li><a href="#">menu</a>
-                    <ul>
+                    <ul id="sample">
                         <li><a href="#">submenu</a></li>
                         <li><a href="#">submenu</a></li>
                         <li><a href="#">submenu</a></li>
                         <li><a href="#">submenu</a></li>
                     </ul>
+                </li>
                 </li>
             </ul>
 
@@ -279,6 +283,17 @@
     </script>   
 
 
+    <script type="text/javascript">
+        $(function(){
+            $("#sample").mouseover(function(){
+                $(this).toggleClass('hoge');
+            });
+            $("#sample").mouseout(function(){
+                $(this).toggleClass('hoge');
+            });
+        });
+    </script>
+    
 
 </body>
 
