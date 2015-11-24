@@ -12,9 +12,10 @@
     <link rel="shortcut icon" href="assets/images/icon.ico">
 
     <!-- Bootstrap itself -->
-    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!-- <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css"> -->
 
     <!-- Styles Sheet (CSS) -->
+    <link href="assets/css/skyblue.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
     <link rel="stylesheet" type="text/css" href="assets/css/dummy.css">
 
@@ -23,7 +24,7 @@
 
     <!-- Title Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
-
+    
     <!-- Google Analitics -->
     <script>
         (function (i, s, o, g, r, a, m) {
@@ -56,10 +57,41 @@
 
             <h2 class="subtitle">[Dummy]</h2>
 
-            
 
 
-            
+
+
+
+            <nav id="test-mainmenu">
+                <div id="test-dropdown">
+
+                    <div id="test-navbar-toggle">
+                        <button type="button" style="width:50px; height:50px; background:rgba(0, 0, 0, 0.12); ">
+                            <i class="fa fa-bars fa-2x" style="color: #59B2E1;"></i> 
+                            <!-- <span class="icon-menu" style="
+                                                           position: center;
+                                                           font-size: 36px;"></span> -->
+                        </button>
+                    </div>
+
+                    <ul id="test-dropdown-menu">
+                        <li><a href="/index.html" class="active">Home</a></li>
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="/gallary.html">Gallary</a></li>
+                        <li><a href="/about.html">About me</a></li>
+                        <li><a href="/dummy.html">Dummy</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+
+
+
+
+
+
+
+
 
             <ul id="fade-in2" class="dropmenu">
                 <li><a href="#">menu</a>
@@ -232,18 +264,19 @@
                     <li><a href="#"><span>Recent posts</span></a></li>
                 </ul>
             </h4>
-            
-            
+
+
 
             <!-- typewriter animation -->
             <div class="typewriter">
-                System...         : Boot Completed.<br>
-                Condition...      : All Green.<br>
-                Program...        : Stand By.<br>
+                System... : Boot Completed.
+                <br> Condition... : All Green.
+                <br> Program... : Stand By.
+                <br>
             </div>
 
-            
-            
+
+
         </div>
     </section>
 
@@ -260,7 +293,7 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
     <!-- bootstrap -->
-    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <!-- <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script> -->
 
     <!-- load header from header.html -->
     <script type="text/javascript" src="/assets/js/load-header.js"></script>
@@ -280,20 +313,25 @@
                 repeat: false // 何回リピートするか指定します。「true」を指定すると、無限にリピートします。)
             });
         });
-    </script>   
+    </script>
 
 
     <script type="text/javascript">
-        $(function(){
-            $("#sample").mouseover(function(){
-                $(this).toggleClass('hoge');
+        $(function () {
+
+            $(document).click(function (event) {
+                if ($.contains($("#test-navbar-toggle")[0], event.target)) {
+                    //alert("not click #test-navbar-toggle")
+                    $("#test-dropdown").addClass("open");
+                }
+                else{
+                    $("#test-dropdown").removeClass("open");
+                }
             });
-            $("#sample").mouseout(function(){
-                $(this).toggleClass('hoge');
-            });
+
         });
     </script>
-    
+
 
 </body>
 
